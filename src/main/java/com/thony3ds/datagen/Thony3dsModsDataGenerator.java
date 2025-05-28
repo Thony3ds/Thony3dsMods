@@ -1,5 +1,7 @@
-package com.thony3ds;
+package com.thony3ds.datagen;
 
+import com.thony3ds.Thony3dsModsWorldGenerator;
+import com.thony3ds.TrialDimension;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -10,6 +12,7 @@ public class Thony3dsModsDataGenerator implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator){
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(Thony3dsModsWorldGenerator::new);
+        pack.addProvider(Thony3dsModsPoiTagProvider::new);
     }
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder){

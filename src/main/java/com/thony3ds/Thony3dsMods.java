@@ -1,5 +1,8 @@
 package com.thony3ds;
 
+import com.thony3ds.item.Thony3dsModsItems;
+import com.thony3ds.util.Thony3dsModsCustomTrades;
+import com.thony3ds.villager.Thony3dsModsVillagers;
 import net.fabricmc.api.ModInitializer;
 
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
@@ -26,6 +29,10 @@ public final class Thony3dsMods implements ModInitializer {
 				.lightWithItem(Items.NETHERITE_INGOT)
 				//.lightWithFluid(Fluids.WATER)
 				.registerPortal();
+
+		Thony3dsModsVillagers.registerVillagers();
+		Thony3dsModsCustomTrades.registerCustomTrades();
+		Thony3dsModsItems.initialize();
 
 		LOGGER.info("Thony3dsMods Loaded !");
 	}

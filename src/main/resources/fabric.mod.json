@@ -12,11 +12,11 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/thony3dsmods/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"fabric-datagen": [
-			"com.thony3ds.Thony3dsModsDataGenerator"
+			"com.thony3ds.datagen.Thony3dsModsDataGenerator"
 		],
 		"main": [
 			"com.thony3ds.Thony3dsMods"
