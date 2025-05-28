@@ -6,5 +6,7 @@
   "item.thony3dsmods.lb4": "Lootbox Légendaire",
   "item.thony3dsmods.strange_coin": "Pièce étrange",
   "item.thony3dsmods.build_kit": "Kit de Construction",
-  "item.thony3dsmods.redstone_kit": "Kit de Redstone"
+  "item.thony3dsmods.redstone_kit": "Kit de Redstone",
+  "itemGroup.thony3dsmods": "Items de Thony3dsMods",
+  "entity.minecraft.villager.frank_master": "Frank Leboeuf"
 }
