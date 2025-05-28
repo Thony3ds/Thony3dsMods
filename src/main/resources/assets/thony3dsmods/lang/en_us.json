@@ -8,5 +8,7 @@
   "item.thony3dsmods.build_kit": "Build Kit",
   "item.thony3dsmods.redstone_kit": "Redstone Kit",
   "itemGroup.thony3dsmods": "Thony3dsMods Items",
-  "entity.minecraft.villager.frank_master": "Frank Leboeuf"
+  "entity.minecraft.villager.frank_master": "Frank Leboeuf",
+  "block.thony3dsmods.frank_workbench": "Frank Workbench",
+  "block.thony3dsmods.eternity_trial_portal_block": "Eternity Trials Portal Block"
 }
