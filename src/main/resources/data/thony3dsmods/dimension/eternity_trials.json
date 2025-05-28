@@ -1,0 +1,12 @@
+{
+  "type": "thony3dsmods:eternity_trials_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:the_void",
+      "lakes": false,
+      "features": false,
+      "layers": []
+    }
+  }
+}

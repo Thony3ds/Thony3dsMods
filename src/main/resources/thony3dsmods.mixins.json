@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.thony3ds.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+      "Thony3dsModsMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

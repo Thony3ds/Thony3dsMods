@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.thony3ds.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+      "Thony3dsModsClientMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

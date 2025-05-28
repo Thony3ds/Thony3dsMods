@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "thony3dsmods",
+	"version": "${version}",
+	"name": "Thony3ds Mods",
+	"description": "Thony3ds Mods",
+	"authors": [
+		"Thony3ds"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/modid/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-datagen": [
+			"com.thony3ds.Thony3dsModsDataGenerator"
+		],
+		"main": [
+			"com.thony3ds.Thony3dsMods"
+		],
+		"client": [
+			"com.thony3ds.Thony3dsModsClient"
+		]
+	},
+	"mixins": [
+		"thony3dsmods.mixins.json",
+		{
+			"config": "thony3dsmods.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
