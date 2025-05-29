@@ -24,12 +24,7 @@ public record PainEchoEnchantmentEffect() implements EnchantmentEntityEffect {
     @Override
     public void apply(ServerWorld world, int level, EnchantmentEffectContext context, Entity target, Vec3d pos) {
         if (context.owner() != null && context.owner() instanceof PlayerEntity player) {
-            float dmg = switch (level) {
-                case 1 -> player.getMaxHealth() - player.getHealth() / 2.0f;
-                case 2 -> player.getMaxHealth() - player.getHealth() / 2.0f;
-                case 3 -> player.getMaxHealth() - player.getHealth() / 2.0f;
-                default -> 0.0f;
-            };
+            float dmg = player.getMaxHealth() - player.getHealth() / 2.0f;
 
             if (target instanceof LivingEntity victim){
                 victim.damage(world, new DamageSource(
@@ -37,6 +32,10 @@ public record PainEchoEnchantmentEffect() implements EnchantmentEntityEffect {
                                 .getOrThrow(RegistryKeys.DAMAGE_TYPE)
                                 .getEntry(PAIN_ECHO_DAMAGE.getValue()).get()
                 ), dmg);
+
+            if (level == 2){
+                player.setHealth(player.getHealth() + dmg /2.0f);
+            }
         }
     }
 }
