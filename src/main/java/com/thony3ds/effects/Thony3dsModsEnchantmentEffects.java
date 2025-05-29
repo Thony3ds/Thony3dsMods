@@ -11,8 +11,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class Thony3dsModsEnchantmentEffects {
-    public static final RegistryKey<Enchantment> THUNDERING = of("thundering");
-    public static MapCodec<ShulkerEnchantmentEffect> LIGHTNING_EFFECT = register("lightning_effect", ShulkerEnchantmentEffect.CODEC);
+    public static final RegistryKey<Enchantment> CURSE_SHULKER = of("curse_of_shulker");
+    public static MapCodec<ShulkerEnchantmentEffect> CURSE_SHULKER_EFFECT = register("curse_of_shulker", ShulkerEnchantmentEffect.CODEC);
 
     private static RegistryKey<Enchantment> of(String path) {
         Identifier id = Identifier.of(Thony3dsMods.MOD_ID, path);

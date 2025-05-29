@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentLevelBasedValue;
 import net.minecraft.enchantment.effect.EnchantmentEffectTarget;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -17,8 +16,8 @@ import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
-public class EnchantmentGenerator extends FabricDynamicRegistryProvider {
-    public EnchantmentGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvider {
+    public Thony3dsModsEnchantmentGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
         System.out.println("REGISTERING ENCHANTS");
     }
@@ -26,19 +25,19 @@ public class EnchantmentGenerator extends FabricDynamicRegistryProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
         // Our new enchantment, "Thundering."
-        register(entries, Thony3dsModsEnchantmentEffects.THUNDERING, Enchantment.builder(
+        register(entries, Thony3dsModsEnchantmentEffects.CURSE_SHULKER, Enchantment.builder(
                                 Enchantment.definition(
                                         registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                                         // this is the "weight" or probability of our enchantment showing up in the table
                                         10,
                                         // the maximum level of the enchantment
-                                        3,
+                                        1,
                                         // base cost for level 1 of the enchantment, and min levels required for something higher
                                         Enchantment.leveledCost(1, 10),
                                         // same fields as above but for max cost
                                         Enchantment.leveledCost(1, 15),
                                         // anvil cost
-                                        5,
+                                        1,
                                         // valid slots
                                         AttributeModifierSlot.HAND
                                 )
@@ -48,7 +47,7 @@ public class EnchantmentGenerator extends FabricDynamicRegistryProvider {
                                 EnchantmentEffectComponentTypes.POST_ATTACK,
                                 EnchantmentEffectTarget.ATTACKER,
                                 EnchantmentEffectTarget.VICTIM,
-                                new ShulkerEnchantmentEffect(EnchantmentLevelBasedValue.linear(0.4f, 0.2f)) // scale the enchantment linearly.
+                                new ShulkerEnchantmentEffect() // scale the enchantment linearly.
                         )
         );
     }

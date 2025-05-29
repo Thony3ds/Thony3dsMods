@@ -13,7 +13,7 @@ public class Thony3dsModsDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(Thony3dsModsWorldGenerator::new);
         pack.addProvider(Thony3dsModsPoiTagProvider::new);
-        pack.addProvider(EnchantmentGenerator::new);
+        pack.addProvider(Thony3dsModsEnchantmentGenerator::new);
     }
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder){
