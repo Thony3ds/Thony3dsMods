@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import com.thony3ds.Thony3dsMods;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
+import net.minecraft.entity.damage.DamageType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -13,6 +14,9 @@ import net.minecraft.util.Identifier;
 public class Thony3dsModsEnchantmentEffects {
     public static final RegistryKey<Enchantment> CURSE_SHULKER = of("curse_of_shulker");
     public static MapCodec<ShulkerEnchantmentEffect> CURSE_SHULKER_EFFECT = register("curse_of_shulker", ShulkerEnchantmentEffect.CODEC);
+
+    public static final RegistryKey<Enchantment> PAIN_ECHO = of("pain_echo");
+    public static MapCodec<PainEchoEnchantmentEffect> PAIN_ECHO_EFFECT = register("pain_echo", PainEchoEnchantmentEffect.CODEC);
 
     private static RegistryKey<Enchantment> of(String path) {
         Identifier id = Identifier.of(Thony3dsMods.MOD_ID, path);

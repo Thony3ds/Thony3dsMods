@@ -17,31 +17,29 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
 
-public record PainEcho() implements EnchantmentEntityEffect {
+public record PainEchoEnchantmentEffect() implements EnchantmentEntityEffect {
+    public static final MapCodec<PainEchoEnchantmentEffect> CODEC = MapCodec.unit(PainEchoEnchantmentEffect::new);
     public static final RegistryKey<DamageType> PAIN_ECHO_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(Thony3dsMods.MOD_ID, "pain_echo"));
-    public static final MapCodec<PainEcho> CODEC = MapCodec.unit(PainEcho::new);
 
     @Override
     public void apply(ServerWorld world, int level, EnchantmentEffectContext context, Entity target, Vec3d pos) {
         if (context.owner() != null && context.owner() instanceof PlayerEntity player) {
-            float dmg;
-            if (level == 1) {
-                dmg = player.getMaxHealth() - player.getHealth() / 2.0f;
-            }else{
-                dmg = 0.0f;
-            }
+            float dmg = switch (level) {
+                case 1 -> player.getMaxHealth() - player.getHealth() / 2.0f;
+                case 2 -> player.getMaxHealth() - player.getHealth() / 2.0f;
+                case 3 -> player.getMaxHealth() - player.getHealth() / 2.0f;
+                default -> 0.0f;
+            };
 
-            if (target instanceof LivingEntity victim) {
-                if (context.owner() != null && context.owner() instanceof PlayerEntity player) {
-                    victim.damage(world, new DamageSource(
-                            world.getRegistryManager()
-                                    .getOrThrow(RegistryKeys.DAMAGE_TYPE)
-                                    .getEntry(PAIN_ECHO_DAMAGE.getValue()).get()
-                    ), dmg);
-                }
-            }
+            if (target instanceof LivingEntity victim){
+                victim.damage(world, new DamageSource(
+                        world.getRegistryManager()
+                                .getOrThrow(RegistryKeys.DAMAGE_TYPE)
+                                .getEntry(PAIN_ECHO_DAMAGE.getValue()).get()
+                ), dmg);
         }
     }
+}
 
     @Override
     public MapCodec<? extends EnchantmentEntityEffect> getCodec() {

@@ -1,5 +1,6 @@
 package com.thony3ds.datagen;
 
+import com.thony3ds.effects.PainEchoEnchantmentEffect;
 import com.thony3ds.effects.ShulkerEnchantmentEffect;
 import com.thony3ds.effects.Thony3dsModsEnchantmentEffects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -48,6 +49,31 @@ public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvi
                                 EnchantmentEffectTarget.ATTACKER,
                                 EnchantmentEffectTarget.VICTIM,
                                 new ShulkerEnchantmentEffect() // scale the enchantment linearly.
+                        )
+        );
+        register(entries, Thony3dsModsEnchantmentEffects.PAIN_ECHO, Enchantment.builder(
+                                Enchantment.definition(
+                                        registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                                        // this is the "weight" or probability of our enchantment showing up in the table
+                                        10,
+                                        // the maximum level of the enchantment
+                                        3,
+                                        // base cost for level 1 of the enchantment, and min levels required for something higher
+                                        Enchantment.leveledCost(1, 10),
+                                        // same fields as above but for max cost
+                                        Enchantment.leveledCost(1, 15),
+                                        // anvil cost
+                                        1,
+                                        // valid slots
+                                        AttributeModifierSlot.HAND
+                                )
+                        )
+                        .addEffect(
+                                // enchantment occurs POST_ATTACK
+                                EnchantmentEffectComponentTypes.POST_ATTACK,
+                                EnchantmentEffectTarget.ATTACKER,
+                                EnchantmentEffectTarget.VICTIM,
+                                new PainEchoEnchantmentEffect() // scale the enchantment linearly.
                         )
         );
     }
