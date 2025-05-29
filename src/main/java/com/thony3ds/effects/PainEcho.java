@@ -26,7 +26,9 @@ public record PainEcho() implements EnchantmentEntityEffect {
         if (context.owner() != null && context.owner() instanceof PlayerEntity player) {
             float dmg;
             if (level == 1) {
-                dmg = player.getMaxHealth() - player.getHealth() / 2;
+                dmg = player.getMaxHealth() - player.getHealth() / 2.0f;
+            }else{
+                dmg = 0.0f;
             }
 
             if (target instanceof LivingEntity victim) {
