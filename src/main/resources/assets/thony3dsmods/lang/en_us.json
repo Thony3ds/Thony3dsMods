@@ -9,6 +9,11 @@
   "item.thony3dsmods.redstone_kit": "Redstone Kit",
   "itemGroup.thony3dsmods": "Thony3dsMods Items",
   "entity.minecraft.villager.frank_master": "Frank Leboeuf",
+  "entity.minecraft.villager.xur_master": "Xur, Agent of the Nine",
   "block.thony3dsmods.frank_workbench": "Frank Workbench",
-  "block.thony3dsmods.eternity_trial_portal_block": "Eternity Trials Portal Block"
+  "block.thony3dsmods.eternity_trial_portal_block": "Eternity Trials Portal Block",
+  "block.thony3dsmods.xur_workbench": "Xur Workbench",
+  "item.thony3dsmods.frank_workbench": "Frank Workbench",
+  "item.thony3dsmods.eternity_trial_portal_block": "Eternity Trials Portal Block",
+  "item.thony3dsmods.xur_workbench": "Xur Workbench"
 }

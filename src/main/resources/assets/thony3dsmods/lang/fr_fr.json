@@ -9,6 +9,11 @@
   "item.thony3dsmods.redstone_kit": "Kit de Redstone",
   "itemGroup.thony3dsmods": "Items de Thony3dsMods",
   "entity.minecraft.villager.frank_master": "Frank Leboeuf",
-  "block.thony3dsmods.frank_workbench": "Block de Métier de Frank",
-  "block.thony3dsmods.eternity_trial_portal_block": "Block de Portail des Defis D'Eternité"
+  "entity.minecraft.villager.xur_master": "Xur, Agent des Neufs",
+  "block.thony3dsmods.frank_workbench": "Block métier de Frank",
+  "block.thony3dsmods.eternity_trial_portal_block": "Block de portail d'Eternité",
+  "block.thony3dsmods.xur_workbench": "Block métier de Xur",
+  "item.thony3dsmods.frank_workbench": "Block métier de Frank",
+  "item.thony3dsmods.eternity_trial_portal_block": "Block de portail d'Eternité",
+  "item.thony3dsmods.xur_workbench": "Block métier de Xur"
 }

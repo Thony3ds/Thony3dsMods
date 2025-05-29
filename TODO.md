@@ -5,12 +5,9 @@ Challenges:
  - Blindtest
  - Boucle toutes les heures et donne dirrectement soit 32 Build/Redstone
 
-Blocks a finir:
- - Block de portail Challenge
- - Block de metier Frank
-
 Enchants:
- - Enchant Custom ?
+ - Curse of Shulker
+ - Echo de douleur
 
 Succes (Optionnel):
  - 71 Bottes

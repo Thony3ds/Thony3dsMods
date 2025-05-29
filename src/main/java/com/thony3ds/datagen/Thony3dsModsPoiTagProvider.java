@@ -23,5 +23,7 @@ public class Thony3dsModsPoiTagProvider extends TagProvider<PointOfInterestType>
     protected void configure(RegistryWrapper.WrapperLookup lookup){
         this.getOrCreateTagBuilder(PointOfInterestTypeTags.ACQUIRABLE_JOB_SITE)
                 .addOptional(Identifier.of(Thony3dsMods.MOD_ID, "frankpoi"));
+        this.getOrCreateTagBuilder(PointOfInterestTypeTags.ACQUIRABLE_JOB_SITE)
+                .addOptional(Identifier.of(Thony3dsMods.MOD_ID, "xurpoi"));
     }
 }

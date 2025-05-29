@@ -33,6 +33,8 @@ public class Thony3dsModsItemGroup {
             itemGroup.add(Thony3dsModsItems.BUILD_KIT);
             itemGroup.add(Thony3dsModsItems.REDSTONE_KIT);
             itemGroup.add(Thony3dsModsBlocks.FRANK_WORKBENCH);
+            itemGroup.add(Thony3dsModsBlocks.ETERNITY_TRIALS_PORTAL_BLOCK);
+            itemGroup.add(Thony3dsModsBlocks.XUR_WORKBENCH);
         });
     }
 }

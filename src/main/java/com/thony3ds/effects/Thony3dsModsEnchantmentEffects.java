@@ -1,0 +1,29 @@
+package com.thony3ds.effects;
+
+import com.mojang.serialization.MapCodec;
+import com.thony3ds.Thony3dsMods;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
+
+public class Thony3dsModsEnchantmentEffects {
+    public static final RegistryKey<Enchantment> THUNDERING = of("thundering");
+    public static MapCodec<ShulkerEnchantmentEffect> LIGHTNING_EFFECT = register("lightning_effect", ShulkerEnchantmentEffect.CODEC);
+
+    private static RegistryKey<Enchantment> of(String path) {
+        Identifier id = Identifier.of(Thony3dsMods.MOD_ID, path);
+        return RegistryKey.of(RegistryKeys.ENCHANTMENT, id);
+    }
+
+    private static <T extends EnchantmentEntityEffect> MapCodec<T> register(String id, MapCodec<T> codec) {
+        return Registry.register(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, Identifier.of(Thony3dsMods.MOD_ID, id), codec);
+    }
+
+    public static void registerModEnchantmentEffects() {
+        Thony3dsMods.LOGGER.info("Registering EnchantmentEffects for" + Thony3dsMods.MOD_ID);
+    }
+}

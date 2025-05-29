@@ -17,9 +17,15 @@ import java.util.function.Function;
 public class Thony3dsModsBlocks {
 
     public static final Block FRANK_WORKBENCH = register(
-            "frank_workbench.json",
+            "frank_workbench",
             Block::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.ANVIL),
+            true
+    );
+    public static final Block XUR_WORKBENCH = register(
+            "xur_workbench",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.SOUL_SAND),
             true
     );
     public static final Block ETERNITY_TRIALS_PORTAL_BLOCK = register(
@@ -29,27 +35,35 @@ public class Thony3dsModsBlocks {
             true
     );
 
-    private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem){
+    private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
+        // Create a registry key for the block
         RegistryKey<Block> blockKey = keyOfBlock(name);
-
+        // Create the block instance
         Block block = blockFactory.apply(settings.registryKey(blockKey));
 
-        if (shouldRegisterItem){
+        // Sometimes, you may not want to register an item for the block.
+        // Eg: if it's a technical block like `minecraft:moving_piston` or `minecraft:end_gateway`
+        if (shouldRegisterItem) {
+            // Items need to be registered with a different type of registry key, but the ID
+            // can be the same.
             RegistryKey<Item> itemKey = keyOfItem(name);
 
-            BlockItem blockItem = new BlockItem(block, new Item.Settings());
+            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
             Registry.register(Registries.ITEM, itemKey, blockItem);
         }
 
         return Registry.register(Registries.BLOCK, blockKey, block);
     }
 
-    private static RegistryKey<Block> keyOfBlock(String name){
+    private static RegistryKey<Block> keyOfBlock(String name) {
         return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Thony3dsMods.MOD_ID, name));
     }
-    private static RegistryKey<Item> keyOfItem(String name){
+
+    private static RegistryKey<Item> keyOfItem(String name) {
         return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Thony3dsMods.MOD_ID, name));
     }
 
-    public static void initialize(){}
+    public static void initialize(){
+
+    }
 }

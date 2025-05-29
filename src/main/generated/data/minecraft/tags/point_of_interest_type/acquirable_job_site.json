@@ -3,6 +3,10 @@
     {
       "id": "thony3dsmods:frankpoi",
       "required": false
+    },
+    {
+      "id": "thony3dsmods:xurpoi",
+      "required": false
     }
   ]
 }

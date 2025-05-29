@@ -29,10 +29,10 @@ public final class Thony3dsMods implements ModInitializer {
 	public void onInitialize() {
 
 		CustomPortalBuilder.beginPortal()
-				.frameBlock(Blocks.NETHERITE_BLOCK)
+				.frameBlock(Thony3dsModsBlocks.ETERNITY_TRIALS_PORTAL_BLOCK)
 				.destDimID(Identifier.of("thony3dsmods", "eternity_trials"))
 				.tintColor(20, 242, 168)
-				.lightWithItem(Items.NETHERITE_INGOT)
+				.lightWithItem(Items.DIAMOND)
 				//.lightWithFluid(Fluids.WATER)
 				.registerPortal();
 
