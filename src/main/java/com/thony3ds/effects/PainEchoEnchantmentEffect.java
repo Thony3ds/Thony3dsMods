@@ -2,7 +2,9 @@ package com.thony3ds.effects;
 
 import com.mojang.serialization.MapCodec;
 import com.thony3ds.Thony3dsMods;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentEffectContext;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -19,22 +21,29 @@ import net.minecraft.util.math.Vec3d;
 
 public record PainEchoEnchantmentEffect() implements EnchantmentEntityEffect {
     public static final MapCodec<PainEchoEnchantmentEffect> CODEC = MapCodec.unit(PainEchoEnchantmentEffect::new);
-    public static final RegistryKey<DamageType> PAIN_ECHO_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(Thony3dsMods.MOD_ID, "pain_echo"));
+    public static final RegistryKey<DamageType> PAIN_ECHO_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(Thony3dsMods.MOD_ID, "pain_echo_damage"));
 
     @Override
     public void apply(ServerWorld world, int level, EnchantmentEffectContext context, Entity target, Vec3d pos) {
         if (context.owner() != null && context.owner() instanceof PlayerEntity player) {
-            float dmg = player.getMaxHealth() - player.getHealth() / 2.0f;
+            float dmg = (float) Math.floor((player.getMaxHealth() - player.getHealth()) / 2.0f);
 
             if (target instanceof LivingEntity victim){
                 victim.damage(world, new DamageSource(
                         world.getRegistryManager()
                                 .getOrThrow(RegistryKeys.DAMAGE_TYPE)
-                                .getEntry(PAIN_ECHO_DAMAGE.getValue()).get()
+                                .getEntry(PAIN_ECHO_DAMAGE.getValue()).orElseThrow()
                 ), dmg);
-
             if (level == 2){
-                player.setHealth(player.getHealth() + dmg /2.0f);
+                player.setHealth(player.getHealth() + 1);
+                if (player.getMainHandStack().isDamageable()) { // Vérifie si l'item a une durabilité
+                    player.getMainHandStack().damage(2, player); // Ajoute 5 points d'usure
+                }
+            }else if (level == 3){
+                player.setHealth(player.getHealth() + 2);
+                if (player.getMainHandStack().isDamageable()) { // Vérifie si l'item a une durabilité
+                    player.getMainHandStack().damage(3, player); // Ajoute 5 points d'usure
+                }
             }
         }
     }

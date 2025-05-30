@@ -5,10 +5,6 @@ Challenges:
  - Blindtest
  - Boucle toutes les heures et donne dirrectement soit 32 Build/Redstone
 
-Enchants:
- - Curse of Shulker
- - Echo de douleur
-
 Succes (Optionnel):
  - 71 Bottes
  - La PORTE

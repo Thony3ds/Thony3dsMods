@@ -30,7 +30,7 @@ public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvi
                                 Enchantment.definition(
                                         registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                                         // this is the "weight" or probability of our enchantment showing up in the table
-                                        10,
+                                        20,
                                         // the maximum level of the enchantment
                                         1,
                                         // base cost for level 1 of the enchantment, and min levels required for something higher
@@ -51,11 +51,12 @@ public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvi
                                 new ShulkerEnchantmentEffect() // scale the enchantment linearly.
                         )
         );
+
         register(entries, Thony3dsModsEnchantmentEffects.PAIN_ECHO, Enchantment.builder(
                                 Enchantment.definition(
-                                        registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                                        registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ItemTags.SWORD_ENCHANTABLE),
                                         // this is the "weight" or probability of our enchantment showing up in the table
-                                        10,
+                                        1,
                                         // the maximum level of the enchantment
                                         2,
                                         // base cost for level 1 of the enchantment, and min levels required for something higher
@@ -63,7 +64,7 @@ public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvi
                                         // same fields as above but for max cost
                                         Enchantment.leveledCost(1, 15),
                                         // anvil cost
-                                        1,
+                                        10,
                                         // valid slots
                                         AttributeModifierSlot.HAND
                                 )

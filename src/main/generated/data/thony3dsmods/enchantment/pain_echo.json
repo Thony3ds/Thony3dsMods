@@ -1,14 +1,14 @@
 {
-  "anvil_cost": 1,
+  "anvil_cost": 10,
   "description": {
-    "translate": "enchantment.thony3dsmods.curse_of_shulker"
+    "translate": "enchantment.thony3dsmods.pain_echo"
   },
   "effects": {
     "minecraft:post_attack": [
       {
         "affected": "victim",
         "effect": {
-          "type": "thony3dsmods:curse_of_shulker"
+          "type": "thony3dsmods:pain_echo"
         },
         "enchanted": "attacker"
       }
@@ -18,7 +18,7 @@
     "base": 1,
     "per_level_above_first": 15
   },
-  "max_level": 1,
+  "max_level": 2,
   "min_cost": {
     "base": 1,
     "per_level_above_first": 10
@@ -26,6 +26,6 @@
   "slots": [
     "hand"
   ],
-  "supported_items": "#minecraft:enchantable/weapon",
-  "weight": 20
+  "supported_items": "#minecraft:enchantable/sword",
+  "weight": 1
 }
