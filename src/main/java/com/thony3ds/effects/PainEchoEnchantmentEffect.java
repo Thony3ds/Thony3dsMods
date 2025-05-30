@@ -47,7 +47,6 @@ public record PainEchoEnchantmentEffect() implements EnchantmentEntityEffect {
                 ItemStack mainHandItem = player.getMainHandStack();
 
                 if (EnchantmentHelper.getLevel(world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(Enchantments.FIRE_ASPECT), mainHandItem) > 0){
-                    Thony3dsMods.LOGGER.info("Thony3dsMods: Fire Aspect isn't allowed !");
                     // Obtenir le composant d'enchantements
                     ItemEnchantmentsComponent.Builder enchantmentBuilder = new ItemEnchantmentsComponent.Builder(mainHandItem.getEnchantments());
                     enchantmentBuilder.remove(entry -> entry.value().equals(world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT).get(Identifier.ofVanilla("fire_aspect"))));
