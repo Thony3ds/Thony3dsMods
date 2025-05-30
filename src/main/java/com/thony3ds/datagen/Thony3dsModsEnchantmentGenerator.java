@@ -58,7 +58,7 @@ public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvi
                                         // this is the "weight" or probability of our enchantment showing up in the table
                                         1,
                                         // the maximum level of the enchantment
-                                        2,
+                                        3,
                                         // base cost for level 1 of the enchantment, and min levels required for something higher
                                         Enchantment.leveledCost(1, 10),
                                         // same fields as above but for max cost
