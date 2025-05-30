@@ -21,4 +21,6 @@ Spawn:
 - KeepInventory
 - Mods D'opti / Lifesteal
 
+ArmorTrim ?
+
 ### Patch Lootbox ??
