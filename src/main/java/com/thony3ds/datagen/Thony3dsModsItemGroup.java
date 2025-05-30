@@ -35,6 +35,8 @@ public class Thony3dsModsItemGroup {
             itemGroup.add(Thony3dsModsBlocks.FRANK_WORKBENCH);
             itemGroup.add(Thony3dsModsBlocks.ETERNITY_TRIALS_PORTAL_BLOCK);
             itemGroup.add(Thony3dsModsBlocks.XUR_WORKBENCH);
+            itemGroup.add(Thony3dsModsBlocks.VILLAGER_SHOP_BLOCK);
+            itemGroup.add(Thony3dsModsItems.CHOCOBAR);
         });
     }
 }

@@ -64,7 +64,7 @@ public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvi
                                         // same fields as above but for max cost
                                         Enchantment.leveledCost(1, 15),
                                         // anvil cost
-                                        10,
+                                        6,
                                         // valid slots
                                         AttributeModifierSlot.HAND
                                 )

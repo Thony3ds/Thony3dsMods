@@ -17,8 +17,7 @@ Succes (Optionnel):
  - Furreur ? (Secret ?)
 
 Spawn:
-- Commande start / open Ender
-- Spawn Protection area
+- commande open Ender
 - KeepInventory
 - Mods D'opti / Lifesteal
 

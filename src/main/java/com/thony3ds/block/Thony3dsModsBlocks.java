@@ -19,19 +19,25 @@ public class Thony3dsModsBlocks {
     public static final Block FRANK_WORKBENCH = register(
             "frank_workbench",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.ANVIL),
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.ANVIL).strength(-1.0F, 3600000.0F).requiresTool(),
             true
     );
     public static final Block XUR_WORKBENCH = register(
             "xur_workbench",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.SOUL_SAND),
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.SOUL_SAND).strength(-1.0F, 3600000.0F).requiresTool(),
             true
     );
     public static final Block ETERNITY_TRIALS_PORTAL_BLOCK = register(
             "eternity_trial_portal_block",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.TRIAL_SPAWNER),
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.TRIAL_SPAWNER).strength(-1.0F, 3600000.0F).requiresTool(),
+            true
+    );
+    public static final Block VILLAGER_SHOP_BLOCK = register(
+            "villager_shop_block",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).strength(-1.0F, 3600000.0F).requiresTool(),
             true
     );
 
