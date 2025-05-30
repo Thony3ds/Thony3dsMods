@@ -2,8 +2,10 @@ package com.thony3ds.effects;
 
 import com.mojang.serialization.MapCodec;
 import com.thony3ds.Thony3dsMods;
+import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentEffectContext;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.entity.Entity;
@@ -13,11 +15,18 @@ import net.minecraft.entity.damage.DamageType;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public record PainEchoEnchantmentEffect() implements EnchantmentEntityEffect {
     public static final MapCodec<PainEchoEnchantmentEffect> CODEC = MapCodec.unit(PainEchoEnchantmentEffect::new);
@@ -34,15 +43,27 @@ public record PainEchoEnchantmentEffect() implements EnchantmentEntityEffect {
                                 .getOrThrow(RegistryKeys.DAMAGE_TYPE)
                                 .getEntry(PAIN_ECHO_DAMAGE.getValue()).orElseThrow()
                 ), dmg);
+
+                ItemStack mainHandItem = player.getMainHandStack();
+
+                if (EnchantmentHelper.getLevel(world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(Enchantments.FIRE_ASPECT), mainHandItem) > 0){
+                    Thony3dsMods.LOGGER.info("Thony3dsMods: Fire Aspect isn't allowed !");
+                    // Obtenir le composant d'enchantements
+                    ItemEnchantmentsComponent.Builder enchantmentBuilder = new ItemEnchantmentsComponent.Builder(mainHandItem.getEnchantments());
+                    enchantmentBuilder.remove(entry -> entry.value().equals(world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT).get(Identifier.ofVanilla("fire_aspect"))));
+                    EnchantmentHelper.set(mainHandItem, enchantmentBuilder.build());
+                    victim.setOnFire(false);
+                }
+
             if (level == 2){
                 player.setHealth(player.getHealth() + 1);
-                if (player.getMainHandStack().isDamageable()) { // Vérifie si l'item a une durabilité
-                    player.getMainHandStack().damage(2, player); // Ajoute 5 points d'usure
+                if (mainHandItem.isDamageable()) { // Vérifie si l'item a une durabilité
+                    mainHandItem.damage(2, player); // Ajoute 5 points d'usure
                 }
             }else if (level == 3){
                 player.setHealth(player.getHealth() + 2);
-                if (player.getMainHandStack().isDamageable()) { // Vérifie si l'item a une durabilité
-                    player.getMainHandStack().damage(3, player); // Ajoute 5 points d'usure
+                if (mainHandItem.isDamageable()) { // Vérifie si l'item a une durabilité
+                    mainHandItem.damage(3, player); // Ajoute 5 points d'usure
                 }
             }
         }
