@@ -13,7 +13,6 @@
     }
   },
   "display": {
-    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
     "description": ":O",
     "icon": {
       "count": 1,

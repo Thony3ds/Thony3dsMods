@@ -25,7 +25,7 @@
       "count": 1,
       "id": "minecraft:enchanted_book"
     },
-    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "background": null,
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

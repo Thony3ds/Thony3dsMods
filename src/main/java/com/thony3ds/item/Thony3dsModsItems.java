@@ -31,8 +31,11 @@ public class Thony3dsModsItems {
     public static final Item BUILD_KIT = register("build_kit", BuildKit::new, new Item.Settings());
 
     public static final ConsumableComponent CHOCOBAR_CONSUMABLE_COMPONENT = ConsumableComponents.food().build();
-    public static final FoodComponent CHOCOBAR_COMPONENT = new FoodComponent.Builder().build();
+    public static final FoodComponent CHOCOBAR_COMPONENT = new FoodComponent.Builder().nutrition(2).saturationModifier(12.0f).build();
     public static final Item CHOCOBAR = register("chocobar", Item::new, new Item.Settings().food(CHOCOBAR_COMPONENT, CHOCOBAR_CONSUMABLE_COMPONENT));
+    public static final ConsumableComponent PIZZA_CONSUMABLE_COMPONENT = ConsumableComponents.food().build();
+    public static final FoodComponent PIZZA_COMPONENT = new FoodComponent.Builder().nutrition(10).saturationModifier(2.0f).build();
+    public static final Item PIZZA = register("pizza", Item::new, new Item.Settings().food(PIZZA_COMPONENT, PIZZA_CONSUMABLE_COMPONENT));
 
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings){
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Thony3dsMods.MOD_ID, name));

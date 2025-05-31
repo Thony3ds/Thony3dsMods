@@ -6,7 +6,6 @@
     }
   },
   "display": {
-    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
     "description": "Je l'ai mangé !!!!!!!!",
     "icon": {
       "count": 1,

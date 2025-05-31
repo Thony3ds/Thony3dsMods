@@ -5,7 +5,7 @@
     }
   },
   "display": {
-    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "background": "thony3dsmods:textures/gui/team_pizza.png",
     "description": "Bienvenue jeune tryharder !",
     "icon": {
       "count": 1,

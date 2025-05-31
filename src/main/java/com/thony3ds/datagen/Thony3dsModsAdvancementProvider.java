@@ -38,7 +38,7 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                         Thony3dsModsItems.CHOCOBAR, // The display icon
                         Text.literal("Team Pizza"), // The title
                         Text.literal("Bienvenue jeune tryharder !"), // The description
-                        Identifier.ofVanilla("textures/gui/advancements/backgrounds/adventure.png"), // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        Identifier.of(Thony3dsMods.MOD_ID, "textures/gui/team_pizza.png"), // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
                         AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
                         true, // Show the toast when completing it
                         true, // Announce it to chat
@@ -55,7 +55,7 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                         Thony3dsModsItems.COIN, // The display icon
                         Text.literal("Salut c'est Frank Leboeuf !"), // The title
                         Text.literal("Vous voulez savoir comme vendre votre voiture ?"), // The description
-                        Identifier.ofVanilla("textures/gui/advancements/backgrounds/adventure.png"), // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
                         AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
                         true, // Show the toast when completing it
                         true, // Announce it to chat
@@ -72,7 +72,7 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                         Thony3dsModsItems.STRANGE_COIN, // The display icon
                         Text.literal("A bientôt dans les Défis d'Eternitée !"), // The title
                         Text.literal("Xur et le mythique Cheval Stélaire attendrons votre retour avec impatience !"), // The description
-                        Identifier.ofVanilla("textures/gui/advancements/backgrounds/adventure.png"), // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
                         AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
                         true, // Show the toast when completing it
                         true, // Announce it to chat
@@ -89,7 +89,7 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                         Thony3dsModsItems.CHOCOBAR, // The display icon
                         Text.literal("Je suis CHOCOBAR !!"), // The title
                         Text.literal(":O"), // The description
-                        Identifier.ofVanilla("textures/gui/advancements/backgrounds/adventure.png"), // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
                         AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
                         true, // Show the toast when completing it
                         true, // Announce it to chat
@@ -105,7 +105,7 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                         Items.CAKE, // The display icon
                         Text.literal("Pourquoi la petite fille tombe t'elle de la balançoire ?"), // The title
                         Text.literal("Je l'ai mangé !!!!!!!!"), // The description
-                        Identifier.ofVanilla("textures/gui/advancements/backgrounds/adventure.png"), // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
                         AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
                         true, // Show the toast when completing it
                         true, // Announce it to chat
@@ -121,7 +121,7 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                         Items.IRON_DOOR, // The display icon
                         Text.literal("JE SUIS LA PORTE !!"), // The title
                         Text.literal("Mais non Walter tu es toi même !"), // The description
-                        Identifier.ofVanilla("textures/gui/advancements/backgrounds/adventure.png"), // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
                         AdvancementFrame.CHALLENGE, // TASK, CHALLENGE, or GOAL
                         true, // Show the toast when completing it
                         true, // Announce it to chat
@@ -131,5 +131,39 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("getDoor", InventoryChangedCriterion.Conditions.items(Items.IRON_DOOR))
                 // Give the advancement an id
                 .build(consumer, Thony3dsMods.MOD_ID + ":get_door");
+
+        AdvancementEntry binaire = Advancement.Builder.create()
+                .parent(speakFrank) //Depends de getDirt
+                .display(
+                        Items.LEVER, // The display icon
+                        Text.literal("01000010 01101001 01101110 01100001 01110010 01111001"), // The title
+                        Text.literal("01000010 01100101 01110011 01110100 00100000 01010000 01110010 01101111 01100110 00100001"), // The description
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
+                        true, // Show the toast when completing it
+                        true, // Announce it to chat
+                        false // Hide it in the advancement tab until it's achieved
+                )
+                // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
+                .criterion("getLever", InventoryChangedCriterion.Conditions.items(Items.LEVER))
+                // Give the advancement an id
+                .build(consumer, Thony3dsMods.MOD_ID + ":binaire");
+
+        AdvancementEntry codage = Advancement.Builder.create()
+                .parent(binaire) //Depends de getDirt
+                .display(
+                        Items.REDSTONE, // The display icon
+                        Text.literal("Mais c'est du codage !!"), // The title
+                        Text.literal("(Prof de con...)"), // The description
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        AdvancementFrame.CHALLENGE, // TASK, CHALLENGE, or GOAL
+                        true, // Show the toast when completing it
+                        true, // Announce it to chat
+                        false // Hide it in the advancement tab until it's achieved
+                )
+                // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
+                .criterion("getRedstone", InventoryChangedCriterion.Conditions.items(Items.REDSTONE))
+                // Give the advancement an id
+                .build(consumer, Thony3dsMods.MOD_ID + ":codage");
     }
 }

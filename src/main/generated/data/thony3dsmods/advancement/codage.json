@@ -1,11 +1,11 @@
 {
-  "parent": "thony3dsmods:speak_frank",
+  "parent": "thony3dsmods:binaire",
   "criteria": {
-    "getDoor": {
+    "getRedstone": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:iron_door"
+            "items": "minecraft:redstone"
           }
         ]
       },
@@ -13,17 +13,17 @@
     }
   },
   "display": {
-    "description": "Mais non Walter tu es toi même !",
+    "description": "(Prof de con...)",
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "minecraft:iron_door"
+      "id": "minecraft:redstone"
     },
-    "title": "JE SUIS LA PORTE !!"
+    "title": "Mais c'est du codage !!"
   },
   "requirements": [
     [
-      "getDoor"
+      "getRedstone"
     ]
   ],
   "sends_telemetry_event": true

@@ -7,14 +7,9 @@ Challenges:
 
 Succes (Optionnel):
  - 71 Bottes
- - La PORTE
- - Putain de chien de con
- - Je l'ai mangé
- - 0010100111 (buton)
- - Sataannn kill chevre
- - Chocobar (craft)
  - Vendez voiture
  - Furreur ? (Secret ?)
+ - Random Master
 
 - KeepInventory
 - Mods D'opti / Lifesteal

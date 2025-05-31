@@ -1,11 +1,11 @@
 {
   "parent": "thony3dsmods:speak_frank",
   "criteria": {
-    "winXur": {
+    "getLever": {
       "conditions": {
         "items": [
           {
-            "items": "thony3dsmods:strange_coin"
+            "items": "minecraft:lever"
           }
         ]
       },
@@ -13,16 +13,16 @@
     }
   },
   "display": {
-    "description": "Xur et le mythique Cheval Stélaire attendrons votre retour avec impatience !",
+    "description": "01000010 01100101 01110011 01110100 00100000 01010000 01110010 01101111 01100110 00100001",
     "icon": {
       "count": 1,
-      "id": "thony3dsmods:strange_coin"
+      "id": "minecraft:lever"
     },
-    "title": "A bientôt dans les Défis d'Eternitée !"
+    "title": "01000010 01101001 01101110 01100001 01110010 01111001"
   },
   "requirements": [
     [
-      "winXur"
+      "getLever"
     ]
   ],
   "sends_telemetry_event": true

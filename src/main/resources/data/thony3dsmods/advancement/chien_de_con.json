@@ -1,17 +1,14 @@
 {
-  "parent": "thony3dsmods:chien_de_con",
+  "parent": "thony3dsmods:speak_frank",
   "criteria": {
-    "killed_goat": {
+    "killed_wolf": {
       "conditions": {
         "entity": [
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:goat",
-              "location": {
-                "dimension": "minecraft:nether"
-              }
+              "type": "minecraft:wolf"
             }
           }
         ]
@@ -21,17 +18,16 @@
   },
   "display": {
     "background": null,
-    "frame": "challenge",
-    "description": "SATAAANNN !!!!!!",
+    "description": "Ducoup je peux pas faire mon français. Mince alors !",
     "icon": {
       "count": 1,
-      "id": "minecraft:goat_horn"
+      "id": "minecraft:wolf_spawn_egg"
     },
-    "title": "SATAAANNN !!!!!!"
+    "title": "Putain de chien de con !!"
   },
   "requirements": [
     [
-      "killed_goat"
+      "killed_wolf"
     ]
   ],
   "rewards": {
