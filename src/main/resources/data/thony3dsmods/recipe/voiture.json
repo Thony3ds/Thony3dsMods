@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #G",
+    "#L#",
+    "D#D"
+  ],
+  "key": {
+    "#": "minecraft:iron_block",
+    "G": "minecraft:glass",
+    "L": "minecraft:lightning_rod",
+    "D": "minecraft:dried_kelp_block"
+  },
+  "result": {
+    "id": "thony3dsmods:voiture",
+    "count": 1
+  },
+  "group": "thony3dsmods:item_group"
+}

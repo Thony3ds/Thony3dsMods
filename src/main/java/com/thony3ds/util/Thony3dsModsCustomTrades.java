@@ -89,6 +89,13 @@ public class Thony3dsModsCustomTrades {
                             new ItemStack(Thony3dsModsItems.LOOTBOX4),
                             9999, 3, 0.0f));
                 });
+        TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.FRANK_MASTER, 5,
+                factories -> {
+                    factories.add((entity, random) -> new TradeOffer(
+                            new TradedItem(Thony3dsModsItems.VOITURE, 1),
+                            new ItemStack(Thony3dsModsItems.COIN, 16),
+                            9999, 3, 0.0f));
+                });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.XUR_MASTER, 1,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
@@ -159,6 +166,5 @@ public class Thony3dsModsCustomTrades {
                                 9999, 3, 0.0f));
                     });
         });
-        //TODO Trade Voiture Succes
     }
 }

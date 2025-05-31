@@ -38,6 +38,9 @@ public class Thony3dsModsItemGroup {
             itemGroup.add(Thony3dsModsBlocks.VILLAGER_SHOP_BLOCK);
             itemGroup.add(Thony3dsModsItems.CHOCOBAR);
             itemGroup.add(Thony3dsModsItems.PIZZA);
+            itemGroup.add(Thony3dsModsItems.CEREALE_BAR);
+            itemGroup.add(Thony3dsModsItems.VOITURE);
+            itemGroup.add(Thony3dsModsItems.RANDOM_ARMOR_TRIM_SMITHING_TEMPLATE);
         });
     }
 }

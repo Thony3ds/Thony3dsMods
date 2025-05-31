@@ -7,8 +7,7 @@ Challenges:
 
 Succes (Optionnel):
  - 71 Bottes
- - Vendez voiture
- - Furreur ? (Secret ?)
+ - Lootsboxs levels
  - Random Master
 
 - KeepInventory

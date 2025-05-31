@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "B",
+        "#"
+    ],
+    "key": {
+        "#": "minecraft:wheat",
+        "B": "minecraft:beetroot"
+    },
+    "result": {
+        "id": "thony3dsmods:cereale_bar",
+        "count": 1
+    },
+    "group": "thony3dsmods:item_group"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#T#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:cocoa_beans",
+    "T": "thony3dsmods:cereale_bar"
+  },
+  "result": {
+    "id": "thony3dsmods:chocobar",
+    "count": 1
+  },
+  "group": "thony3dsmods:item_group"
+}

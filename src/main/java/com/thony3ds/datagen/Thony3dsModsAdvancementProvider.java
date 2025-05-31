@@ -99,6 +99,38 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("getChocobar", InventoryChangedCriterion.Conditions.items(Thony3dsModsItems.CHOCOBAR))
                 // Give the advancement an id
                 .build(consumer, Thony3dsMods.MOD_ID + ":get_chocobar");
+        AdvancementEntry getPizza = Advancement.Builder.create()
+                .parent(speakFrank) //Depends de getDirt
+                .display(
+                        Thony3dsModsItems.PIZZA, // The display icon
+                        Text.literal("Pizza !"), // The title
+                        Text.literal("Pizza !"), // The description
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
+                        true, // Show the toast when completing it
+                        true, // Announce it to chat
+                        false // Hide it in the advancement tab until it's achieved
+                )
+                // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
+                .criterion("getPizza", InventoryChangedCriterion.Conditions.items(Thony3dsModsItems.PIZZA))
+                // Give the advancement an id
+                .build(consumer, Thony3dsMods.MOD_ID + ":get_pizza");
+        AdvancementEntry getCar = Advancement.Builder.create()
+                .parent(speakFrank) //Depends de getDirt
+                .display(
+                        Thony3dsModsItems.VOITURE, // The display icon
+                        Text.literal("Vendez votre voiture.fr !"), // The title
+                        Text.literal("On paye bien... pour votre voiture !!"), // The description
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        AdvancementFrame.CHALLENGE, // TASK, CHALLENGE, or GOAL
+                        true, // Show the toast when completing it
+                        true, // Announce it to chat
+                        false // Hide it in the advancement tab until it's achieved
+                )
+                // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
+                .criterion("getCar", InventoryChangedCriterion.Conditions.items(Thony3dsModsItems.VOITURE))
+                // Give the advancement an id
+                .build(consumer, Thony3dsMods.MOD_ID + ":get_car");
         AdvancementEntry iEatIt = Advancement.Builder.create()
                 .parent(speakFrank) //Depends de getDirt
                 .display(
@@ -165,5 +197,73 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("getRedstone", InventoryChangedCriterion.Conditions.items(Items.REDSTONE))
                 // Give the advancement an id
                 .build(consumer, Thony3dsMods.MOD_ID + ":codage");
+
+        AdvancementEntry lootBox2 = Advancement.Builder.create()
+                .parent(speakFrank) //Depends de getDirt
+                .display(
+                        Thony3dsModsItems.LOOTBOX2, // The display icon
+                        Text.literal("Le début!"), // The title
+                        Text.literal("Les récompenses ne font que commencer"), // The description
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
+                        true, // Show the toast when completing it
+                        true, // Announce it to chat
+                        false // Hide it in the advancement tab until it's achieved
+                )
+                // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
+                .criterion("getLootbox", InventoryChangedCriterion.Conditions.items(Thony3dsModsItems.LOOTBOX2))
+                // Give the advancement an id
+                .build(consumer, Thony3dsMods.MOD_ID + ":lootbox2");
+
+        AdvancementEntry lootBox3 = Advancement.Builder.create()
+                .parent(lootBox2) //Depends de getDirt
+                .display(
+                        Thony3dsModsItems.LOOTBOX3, // The display icon
+                        Text.literal("On ce met bien !"), // The title
+                        Text.literal("En même temps la flemme du Nether !"), // The description
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
+                        true, // Show the toast when completing it
+                        true, // Announce it to chat
+                        false // Hide it in the advancement tab until it's achieved
+                )
+                // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
+                .criterion("getLootbox", InventoryChangedCriterion.Conditions.items(Thony3dsModsItems.LOOTBOX3))
+                // Give the advancement an id
+                .build(consumer, Thony3dsMods.MOD_ID + ":lootbox3");
+
+        AdvancementEntry lootBox4 = Advancement.Builder.create()
+                .parent(lootBox3) //Depends de getDirt
+                .display(
+                        Thony3dsModsItems.LOOTBOX4, // The display icon
+                        Text.literal("Les loots ultimes !"), // The title
+                        Text.literal("Tu savais que c'était les plus rares du jeu ?!"), // The description
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        AdvancementFrame.CHALLENGE, // TASK, CHALLENGE, or GOAL
+                        true, // Show the toast when completing it
+                        true, // Announce it to chat
+                        false // Hide it in the advancement tab until it's achieved
+                )
+                // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
+                .criterion("getLootbox", InventoryChangedCriterion.Conditions.items(Thony3dsModsItems.LOOTBOX4))
+                // Give the advancement an id
+                .build(consumer, Thony3dsMods.MOD_ID + ":lootbox4");
+
+        AdvancementEntry randomMaster = Advancement.Builder.create()
+                .parent(teamPizza) //Depends de getDirt
+                .display(
+                        Thony3dsModsItems.RANDOM_ARMOR_TRIM_SMITHING_TEMPLATE,
+                        Text.literal("Random Master"), // The title
+                        Text.literal("Le summum de la randomitude !"), // The description
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        AdvancementFrame.GOAL, // TASK, CHALLENGE, or GOAL
+                        true, // Show the toast when completing it
+                        true, // Announce it to chat
+                        false // Hide it in the advancement tab until it's achieved
+                )
+                // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
+                .criterion("getRandomMaster", InventoryChangedCriterion.Conditions.items(Thony3dsModsItems.RANDOM_ARMOR_TRIM_SMITHING_TEMPLATE)) //TODO Change
+                // Give the advancement an id
+                .build(consumer, Thony3dsMods.MOD_ID + ":random_master");
     }
 }

@@ -29,6 +29,9 @@ public class Thony3dsModsItems {
     public static final Item STRANGE_COIN = register("strange_coin", Item::new, new Item.Settings());
     public static final Item REDSTONE_KIT = register("redstone_kit", RedstoneKit::new, new Item.Settings());
     public static final Item BUILD_KIT = register("build_kit", BuildKit::new, new Item.Settings());
+    public static final Item CEREALE_BAR = register("cereale_bar", Item::new, new Item.Settings());
+    public static final Item VOITURE = register("voiture", Item::new, new Item.Settings());
+    public static final Item RANDOM_ARMOR_TRIM_SMITHING_TEMPLATE = register("random_armor_trim_smithing_template", Item::new, new Item.Settings());
 
     public static final ConsumableComponent CHOCOBAR_CONSUMABLE_COMPONENT = ConsumableComponents.food().build();
     public static final FoodComponent CHOCOBAR_COMPONENT = new FoodComponent.Builder().nutrition(2).saturationModifier(12.0f).build();

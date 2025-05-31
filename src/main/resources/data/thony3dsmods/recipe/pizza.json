@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#W#",
+    "CMC",
+    "BBB"
+  ],
+  "key": {
+    "#": "minecraft:brown_mushroom",
+    "W": "minecraft:wheat_seeds",
+    "C": "minecraft:cooked_porkchop",
+    "M": "minecraft:milk_bucket",
+    "B": "minecraft:bread"
+  },
+  "result": {
+    "id": "thony3dsmods:pizza",
+    "count": 1
+  },
+  "group": "thony3dsmods:item_group"
+}
