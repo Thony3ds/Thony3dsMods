@@ -16,11 +16,7 @@ Succes (Optionnel):
  - Vendez voiture
  - Furreur ? (Secret ?)
 
-Spawn:
-- commande open Ender
 - KeepInventory
 - Mods D'opti / Lifesteal
-
-ArmorTrim ?
 
 ### Patch Lootbox ??

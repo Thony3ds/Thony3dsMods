@@ -15,6 +15,7 @@ public class Thony3dsModsDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(Thony3dsModsWorldGenerator::new);
         pack.addProvider(Thony3dsModsPoiTagProvider::new);
         pack.addProvider(Thony3dsModsEnchantmentGenerator::new);
+        pack.addProvider(Thony3dsModsAdvancementProvider::new);
     }
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder){

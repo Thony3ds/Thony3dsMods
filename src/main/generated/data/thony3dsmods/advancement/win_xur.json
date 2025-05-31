@@ -1,0 +1,30 @@
+{
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "winXur": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thony3dsmods:strange_coin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Xur et le mythique Cheval Stélaire attendrons votre retour avec impatience !",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:strange_coin"
+    },
+    "title": "A bientôt dans les Défis d'Eternitée !"
+  },
+  "requirements": [
+    [
+      "winXur"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

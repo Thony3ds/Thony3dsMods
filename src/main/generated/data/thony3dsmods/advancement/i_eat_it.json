@@ -1,0 +1,23 @@
+{
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "iEatIt": {
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Je l'ai mangé !!!!!!!!",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:cake"
+    },
+    "title": "Pourquoi la petite fille tombe t'elle de la balançoire ?"
+  },
+  "requirements": [
+    [
+      "iEatIt"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

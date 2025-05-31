@@ -1,6 +1,7 @@
 package com.thony3ds;
 
 import com.thony3ds.block.Thony3dsModsBlocks;
+import com.thony3ds.criterions.Thony3dsModsCriteria;
 import com.thony3ds.datagen.Thony3dsModsItemGroup;
 import com.thony3ds.effects.Thony3dsModsEnchantmentEffects;
 import com.thony3ds.item.Thony3dsModsItems;
@@ -10,6 +11,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.passive.VillagerEntity;
@@ -49,6 +51,11 @@ public final class Thony3dsMods implements ModInitializer {
 
 		Thony3dsModsItems.initialize();
 		Thony3dsModsBlocks.initialize();
+		Thony3dsModsCriteria.initialize();
+		ServerPlayConnectionEvents.JOIN.register((player, truc, world) -> {
+			Thony3dsModsCriteria.JOIN_GAME.trigger(player.getPlayer());
+		});
+
 		Thony3dsModsEnchantmentEffects.registerModEnchantmentEffects();
 		Thony3dsModsVillagers.registerVillagers();
 		Thony3dsModsCustomTrades.registerCustomTrades();

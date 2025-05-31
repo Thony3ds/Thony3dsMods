@@ -1,0 +1,40 @@
+{
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "killed_goat": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:goat",
+              "location": {
+                "dimension": "minecraft:nether"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "SATAAANNN !!!!!!",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:goat_horn"
+    },
+    "title": "SATAAANNN !!!!!!"
+  },
+  "requirements": [
+    [
+      "killed_goat"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

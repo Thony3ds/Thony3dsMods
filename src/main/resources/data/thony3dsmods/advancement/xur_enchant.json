@@ -1,0 +1,40 @@
+{
+  "parent": "thony3dsmods:win_xur",
+  "criteria": {
+    "xur_enchant": {
+      "trigger": "minecraft:enchanted_item",
+      "conditions": {
+        "item": {
+          "tag": "minecraft:swords"
+        },
+        "enchantments": [
+          {
+            "id": "thony3dsmods:pain_echo",
+            "lvl": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": "Agent des Neufs !",
+    "description": "Si les Neufs ne m'avaient pas envoyé ici, vous n'auriez certainement jamais eu ceci !",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:enchanted_book"
+    },
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "xur_enchant"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

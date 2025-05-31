@@ -1,0 +1,30 @@
+{
+  "parent": "thony3dsmods:team_pizza",
+  "criteria": {
+    "speakFrank": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thony3dsmods:lb1"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Vous voulez savoir comme vendre votre voiture ?",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:coin"
+    },
+    "title": "Salut c'est Frank Leboeuf !"
+  },
+  "requirements": [
+    [
+      "speakFrank"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

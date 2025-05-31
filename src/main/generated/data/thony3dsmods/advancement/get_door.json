@@ -1,0 +1,31 @@
+{
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "getDoor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_door"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Mais non Walter tu es toi même !",
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_door"
+    },
+    "title": "JE SUIS LA PORTE !!"
+  },
+  "requirements": [
+    [
+      "getDoor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

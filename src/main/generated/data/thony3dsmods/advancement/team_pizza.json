@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "joinTeamPizza": {
+      "trigger": "thony3dsmods:join_game"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Bienvenue jeune tryharder !",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:chocobar"
+    },
+    "title": "Team Pizza"
+  },
+  "requirements": [
+    [
+      "joinTeamPizza"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

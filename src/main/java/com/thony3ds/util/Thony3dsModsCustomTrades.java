@@ -149,7 +149,7 @@ public class Thony3dsModsCustomTrades {
             RegistryEntry<Enchantment> enchantmentEntry =
                     RegistryEntry.of(server.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT).get(Identifier.of(Thony3dsMods.MOD_ID, "pain_echo")));
             ItemStack painEcho = new ItemStack(Items.ENCHANTED_BOOK);
-            painEcho.addEnchantment(enchantmentEntry, 3);
+            painEcho.addEnchantment(enchantmentEntry, 1);
 
             TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.XUR_MASTER, 5,
                     factories -> {

@@ -1,0 +1,30 @@
+{
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "getChocobar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thony3dsmods:chocobar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": ":O",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:chocobar"
+    },
+    "title": "Je suis CHOCOBAR !!"
+  },
+  "requirements": [
+    [
+      "getChocobar"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
