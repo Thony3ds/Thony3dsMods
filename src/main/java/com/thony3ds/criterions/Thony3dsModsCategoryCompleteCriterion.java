@@ -10,21 +10,34 @@ import net.minecraft.predicate.entity.LootContextPredicate;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 public class Thony3dsModsCategoryCompleteCriterion extends AbstractCriterion<Thony3dsModsCategoryCompleteCriterion.Conditions> {
 
     private static final Identifier ID = Identifier.of(Thony3dsMods.MOD_ID, "category_complete");
+    // Liste statique pour stocker les joueurs déjà vérifiés
+    private static final Set<UUID> checkedPlayers = new HashSet<>();
+
 
     @Override
     public Codec<Conditions> getConditionsCodec() {
         return Conditions.CODEC;
     }
 
-    public static void trigger(ServerPlayerEntity player) {
+    public void trigger(ServerPlayerEntity player) {
+        UUID playerId = player.getUuid();
+
+        // Empêcher les vérifications récursives
+        if (checkedPlayers.contains(playerId)) {
+            return;
+        }
+
+        checkedPlayers.add(playerId); // Ajout du joueur à la liste des vérifiés
+
         this.trigger(player, conditions -> conditions.matches(player));
+
+        // Nettoyage après l'exécution
+        checkedPlayers.remove(playerId);
     }
 
     public record Conditions(Optional<String> category)

@@ -1,6 +1,7 @@
 package com.thony3ds.mixin;
 
 import com.thony3ds.criterions.Thony3dsModsCategoryCompleteCriterion;
+import com.thony3ds.criterions.Thony3dsModsCriteria;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.PlayerAdvancementTracker;
@@ -19,7 +20,7 @@ public class ServerPlayerEntityMixin {
     private void onAdvancementTrackerReturn(CallbackInfoReturnable<PlayerAdvancementTracker> cir) {
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
 
-       Thony3dsModsCategoryCompleteCriterion.trigger(player);
+       Thony3dsModsCriteria.CATEGORY_COMPLETE.trigger(player);
     }
 }
 
