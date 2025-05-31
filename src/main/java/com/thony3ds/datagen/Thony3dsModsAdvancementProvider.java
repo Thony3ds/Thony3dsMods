@@ -1,24 +1,19 @@
 package com.thony3ds.datagen;
 
 import com.thony3ds.Thony3dsMods;
+import com.thony3ds.criterions.Thony3dsModsCategoryCompleteCriterion;
 import com.thony3ds.criterions.Thony3dsModsCriteria;
 import com.thony3ds.criterions.Thony3dsModsOnJoinCriterion;
 import com.thony3ds.item.Thony3dsModsItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.criterion.ConsumeItemCriterion;
-import net.minecraft.advancement.criterion.ChangedDimensionCriterion;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
@@ -249,6 +244,24 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                 // Give the advancement an id
                 .build(consumer, Thony3dsMods.MOD_ID + ":lootbox4");
 
+        AdvancementEntry boots71 = Advancement.Builder.create()
+                .parent(speakFrank) //Depends de getDirt
+                .display(
+                        Items.IRON_BOOTS,
+                        Text.literal("71 Bottes !!"), // The title
+                        Text.literal("Alors que juste des lingots c'était suffisant !"), // The description
+                        null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
+                        AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
+                        true, // Show the toast when completing it
+                        true, // Announce it to chat
+                        false // Hide it in the advancement tab until it's achieved
+                )
+                // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
+                .criterion("getCheckNuggets", InventoryChangedCriterion.Conditions.items(Items.IRON_NUGGET))
+                .criterion("getCheckBoots", InventoryChangedCriterion.Conditions.items(Items.IRON_BOOTS))
+                // Give the advancement an id
+                .build(consumer, Thony3dsMods.MOD_ID + ":boots71");
+
         AdvancementEntry randomMaster = Advancement.Builder.create()
                 .parent(teamPizza) //Depends de getDirt
                 .display(
@@ -262,7 +275,7 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                         false // Hide it in the advancement tab until it's achieved
                 )
                 // "got_dirt" is the name referenced by other advancements when they want to have "requirements."
-                .criterion("getRandomMaster", InventoryChangedCriterion.Conditions.items(Thony3dsModsItems.RANDOM_ARMOR_TRIM_SMITHING_TEMPLATE)) //TODO Change
+                .criterion("getRandomMaster", Thony3dsModsCriteria.CATEGORY_COMPLETE.create(new Thony3dsModsCategoryCompleteCriterion.Conditions(Optional.empty())))
                 // Give the advancement an id
                 .build(consumer, Thony3dsMods.MOD_ID + ":random_master");
     }

@@ -27,7 +27,7 @@ public class LootBox1 extends Item {
             new ItemStack(Items.SHEEP_SPAWN_EGG, 1),
             new ItemStack(Items.PIG_SPAWN_EGG, 1),
             new ItemStack(Items.CHICKEN_SPAWN_EGG, 1),
-            new ItemStack(Items.ARMADILLO_SCUTE, 1),
+            new ItemStack(Items.FIREWORK_ROCKET, 64),
             new ItemStack(Items.WOLF_ARMOR, 1),
             new ItemStack(Items.ANCIENT_DEBRIS, 1)
     );

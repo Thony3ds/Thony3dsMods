@@ -1,0 +1,42 @@
+{
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "getCheckBoots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "getCheckNuggets": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Alors que juste des lingots c'était suffisant !",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_boots"
+    },
+    "title": "71 Bottes !!"
+  },
+  "requirements": [
+    [
+      "getCheckNuggets"
+    ],
+    [
+      "getCheckBoots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

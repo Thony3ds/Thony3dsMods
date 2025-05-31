@@ -5,9 +5,7 @@ Challenges:
  - Blindtest
  - Boucle toutes les heures et donne dirrectement soit 32 Build/Redstone
 
-Succes (Optionnel):
- - 71 Bottes
- - Random Master a finir
+Armor Trim Custom RANDOM
 
 - KeepInventory
 - Mods D'opti / Lifesteal
