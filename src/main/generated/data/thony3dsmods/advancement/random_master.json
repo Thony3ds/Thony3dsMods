@@ -1,0 +1,30 @@
+{
+  "parent": "thony3dsmods:team_pizza",
+  "criteria": {
+    "getRandomMaster": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thony3dsmods:random_armor_trim_smithing_template"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Le summum de la randomitude !",
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:random_armor_trim_smithing_template"
+    },
+    "title": "Random Master"
+  },
+  "requirements": [
+    [
+      "getRandomMaster"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

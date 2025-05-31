@@ -1,0 +1,30 @@
+{
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "getCar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thony3dsmods:voiture"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "On paye bien... pour votre voiture !!",
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:voiture"
+    },
+    "title": "Vendez votre voiture.fr !"
+  },
+  "requirements": [
+    [
+      "getCar"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

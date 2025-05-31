@@ -1,0 +1,29 @@
+{
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "getPizza": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thony3dsmods:pizza"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Pizza !",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:pizza"
+    },
+    "title": "Pizza !"
+  },
+  "requirements": [
+    [
+      "getPizza"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

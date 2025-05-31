@@ -1,0 +1,30 @@
+{
+  "parent": "thony3dsmods:lootbox3",
+  "criteria": {
+    "getLootbox": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thony3dsmods:lb4"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Tu savais que c'était les plus rares du jeu ?!",
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:lb4"
+    },
+    "title": "Les loots ultimes !"
+  },
+  "requirements": [
+    [
+      "getLootbox"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -7,8 +7,7 @@ Challenges:
 
 Succes (Optionnel):
  - 71 Bottes
- - Lootsboxs levels
- - Random Master
+ - Random Master a finir
 
 - KeepInventory
 - Mods D'opti / Lifesteal

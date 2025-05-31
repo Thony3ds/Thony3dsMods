@@ -1,0 +1,29 @@
+{
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "getLootbox": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thony3dsmods:lb2"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Les récompenses ne font que commencer",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:lb2"
+    },
+    "title": "Le début!"
+  },
+  "requirements": [
+    [
+      "getLootbox"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

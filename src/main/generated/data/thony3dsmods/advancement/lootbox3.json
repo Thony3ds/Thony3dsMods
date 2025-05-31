@@ -1,0 +1,29 @@
+{
+  "parent": "thony3dsmods:lootbox2",
+  "criteria": {
+    "getLootbox": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thony3dsmods:lb3"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "En même temps la flemme du Nether !",
+    "icon": {
+      "count": 1,
+      "id": "thony3dsmods:lb3"
+    },
+    "title": "On ce met bien !"
+  },
+  "requirements": [
+    [
+      "getLootbox"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
