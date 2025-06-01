@@ -2,10 +2,12 @@ package com.thony3ds.criterions;
 
 import com.mojang.serialization.Codec;
 import com.thony3ds.Thony3dsMods;
+import com.thony3ds.item.Thony3dsModsItems;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.criterion.AbstractCriterion;
+import net.minecraft.item.ItemStack;
 import net.minecraft.predicate.entity.LootContextPredicate;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
@@ -62,6 +64,7 @@ public class Thony3dsModsCategoryCompleteCriterion extends AbstractCriterion<Tho
                     return false; // Un succès n'est pas terminé
                 }
             }
+            player.getInventory().insertStack(new ItemStack(Thony3dsModsItems.RANDOM_ARMOR_TRIM_SMITHING_TEMPLATE));
             return true; // Tous les succès sont complétés
         }
     }

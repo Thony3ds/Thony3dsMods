@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#T#",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:diamond",
+    "T": "thony3dsmods:random_armor_trim_smithing_template",
+    "C": "minecraft:chiseled_resin_bricks"
+  },
+  "result": {
+    "id": "thony3dsmods:random_armor_trim_smithing_template",
+    "count": 2
+  }
+}

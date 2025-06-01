@@ -1,0 +1,8 @@
+{
+  "asset_id": "thony3dsmods:random",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.thony3dsmods.random"
+  },
+  "template_item": "thony3dsmods:random_armor_trim_smithing_template"
+}
