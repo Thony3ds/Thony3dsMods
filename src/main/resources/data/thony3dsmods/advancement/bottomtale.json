@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:bone",
+      "count": 1
+    },
+    "title": "BottomStory",
+    "description": "Le jeu aux 1001 secrets ou tu combat une fleur x)",
+    "background": null,
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "thony3dsmods:tobyfox",
+  "criteria": {
+    "skull_in_end": {
+      "entity": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type": "minecraft:skeleton",
+            "location": {
+              "dimension": "minecraft:the_end"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "requirements": [
+    [
+      "skull_in_end"
+    ]
+  ],
+  "rewards": {
+    "loot": [],
+    "experience": 10
+  },
+  "sends_telemetry_event": true
+}

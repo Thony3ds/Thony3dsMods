@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:fox_spawn_egg",
+      "count": 1
+    },
+    "title": "TobyFox ??",
+    "description": "A dans 5 ans pour le prochaine épisode",
+    "background": null,
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "adopt_fox": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:skeleton"
+        },
+        "child": {
+          "type": "minecraft:fox"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "adopt_fox"
+    ]
+  ],
+  "rewards": {
+    "loot": [],
+    "experience": 10
+  },
+  "sends_telemetry_event": true
+}

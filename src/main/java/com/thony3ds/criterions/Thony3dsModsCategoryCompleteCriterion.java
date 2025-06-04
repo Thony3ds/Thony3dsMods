@@ -49,7 +49,8 @@ public class Thony3dsModsCategoryCompleteCriterion extends AbstractCriterion<Tho
                 .xmap(s -> new Conditions(Optional.of(s)), conditions -> conditions.category().orElse(""))
                 .codec();
 
-        private static final List<String> ma_liste = List.of("satan","xur_enchant");
+        private static final List<String> ma_liste = List.of("binaire","boots71","codage", "get_car", "get_chocobar", "get_door", "get_pizza",
+                "i_eat_it", "lootbox2", "lootbox3", "lootbox4", "speak_frank", "win_xur", "alzheimer", "bottomtale", "chien_de_con", "kill_e", "samba", "satan", "spammeur", "tobyfox", "xur_enchant");
 
         @Override
         public Optional<LootContextPredicate> player() {

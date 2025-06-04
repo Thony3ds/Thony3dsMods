@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:deepslate_brick_stairs",
+      "count": 1
+    },
+    "title": "Spammeur dans les fucking escalier !!",
+    "description": "Faut respecter les règles gros rageux !",
+    "background": null,
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "stair": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:deepslate_brick_stairs"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "stair"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

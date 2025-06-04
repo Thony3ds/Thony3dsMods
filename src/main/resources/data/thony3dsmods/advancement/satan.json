@@ -10,7 +10,7 @@
             "predicate": {
               "type": "minecraft:goat",
               "location": {
-                "dimension": "minecraft:nether"
+                "dimension": "minecraft:the_nether"
               }
             }
           }

@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:potion",
+      "count": 1
+    },
+    "title": "Qu'es-ce que ma grand mère qui à alzheimer ma dit hier ?",
+    "description": "PTDR T qui ? A non elle est morte !",
+    "background": null,
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "thony3dsmods:chien_de_con",
+  "criteria": {
+    "player_mort": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:villager"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "player_mort"
+    ]
+  ],
+  "rewards": {
+    "experience": 10
+  },
+  "sends_telemetry_event": true
+}
