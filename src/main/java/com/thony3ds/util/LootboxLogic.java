@@ -50,7 +50,7 @@ public class LootboxLogic {
 
         ItemStack stack = new ItemStack(offHand.getItem(), 64);
 
-        player.getInventory().insertStack(stack);
+        player.giveItemStack(stack);
         return true;
     }
 }

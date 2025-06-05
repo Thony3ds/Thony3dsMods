@@ -46,6 +46,8 @@ public class Thony3dsModsItems {
     public static final FoodComponent PIZZA_COMPONENT = new FoodComponent.Builder().nutrition(10).build();
     public static final Item PIZZA = register("pizza", Item::new, new Item.Settings().food(PIZZA_COMPONENT, PIZZA_CONSUMABLE_COMPONENT));
 
+    public static final Item HEART = register("heart", Heart::new, new Item.Settings());
+
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings){
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Thony3dsMods.MOD_ID, name));
 

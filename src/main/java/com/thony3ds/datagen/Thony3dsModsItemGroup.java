@@ -44,6 +44,7 @@ public class Thony3dsModsItemGroup {
             itemGroup.add(Thony3dsModsItems.APPELLE_SUR_MON_TELEPHONE_MUSIC_DISK);
             itemGroup.add(Thony3dsModsItems.POLISH_COW_MUSIC_DISK);
             itemGroup.add(Thony3dsModsItems.DONT_STOP_THE_FASCISM_MUSIC_DISK);
+            itemGroup.add(Thony3dsModsItems.HEART);
         });
     }
 }

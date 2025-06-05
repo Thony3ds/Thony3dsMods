@@ -49,7 +49,7 @@ public class Thony3dsModsAdvancementProvider extends FabricAdvancementProvider {
                 .display(
                         Thony3dsModsItems.COIN, // The display icon
                         Text.literal("Salut c'est Frank Leboeuf !"), // The title
-                        Text.literal("Vous voulez savoir comme vendre votre voiture ?"), // The description
+                        Text.literal("Vous voulez savoir comment vendre votre voiture ?"), // The description
                         null, // Background image for the tab in the advancements page, if this is a root advancement (has no parent)
                         AdvancementFrame.TASK, // TASK, CHALLENGE, or GOAL
                         true, // Show the toast when completing it

@@ -1,13 +1,14 @@
 {
-	"required": true,
-	"package": "com.thony3ds.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"Thony3dsModsMixin",
-		"VillagerMixin",
-		"ServerPlayerEntityMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "com.thony3ds.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LifeStealMixin",
+    "ServerPlayerEntityMixin",
+    "Thony3dsModsMixin",
+    "VillagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

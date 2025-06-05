@@ -42,7 +42,7 @@ public class LootBox2 extends Item {
         }
 
         player.getInventory().getMainHandStack().decrement(1);
-        player.getInventory().insertStack(LootboxLogic.getRandomItem(lootRare));
+        player.giveItemStack(LootboxLogic.getRandomItem(lootRare));
         return ActionResult.SUCCESS;
     }
 }
