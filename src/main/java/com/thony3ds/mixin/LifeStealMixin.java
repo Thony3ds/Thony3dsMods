@@ -14,7 +14,7 @@ public abstract class LifeStealMixin {
     @Inject(method="onDeath", at= @At("HEAD"))
     public void onPlayerDeath(DamageSource source, CallbackInfo ci){
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
-        if (player.getAttributeInstance(EntityAttributes.MAX_HEALTH).getBaseValue() > 10) {
+        if (player.getAttributeInstance(EntityAttributes.MAX_HEALTH).getBaseValue() > 10 && !player.getWorld().getRegistryKey().toString().equals("eternity_trials")) {
             int amount;
             if ((int) player.getAttributeInstance(EntityAttributes.MAX_HEALTH).getBaseValue() == 11) {
                 amount = 1;
