@@ -5,6 +5,7 @@ import com.thony3ds.criterions.Thony3dsModsCriteria;
 import com.thony3ds.datagen.Thony3dsModsItemGroup;
 import com.thony3ds.effects.Thony3dsModsEnchantmentEffects;
 import com.thony3ds.item.Thony3dsModsItems;
+import com.thony3ds.sound.Thony3dsModsSounds;
 import com.thony3ds.util.Thony3dsModsCustomTrades;
 import com.thony3ds.villager.Thony3dsModsVillagers;
 import net.fabricmc.api.ModInitializer;
@@ -32,6 +33,7 @@ public final class Thony3dsMods implements ModInitializer {
 				//.lightWithFluid(Fluids.WATER)
 				.registerPortal();
 
+		Thony3dsModsSounds.registerSounds();
 		Thony3dsModsItems.initialize();
 		Thony3dsModsBlocks.initialize();
 		Thony3dsModsCriteria.initialize();

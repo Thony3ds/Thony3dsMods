@@ -24,5 +24,11 @@
   "item.thony3dsmods.xur_workbench": "Block métier de Xur",
   "enchantment.thony3dsmods.curse_of_shulker": "Malédiction de Shulker",
   "enchantment.thony3dsmods.pain_echo": "Echo de Douleur",
-  "trim_pattern.thony3dsmods.random": "Ornement du Random"
+  "trim_pattern.thony3dsmods.random": "Ornement du Random",
+  "item.thony3dsmods.appelle_sur_mon_telephone_music_disk": "Disque",
+  "item.thony3dsmods.appelle_sur_mon_telephone_music_disk.desc": "Les Guignols - Appelle sur mon téléphone",
+  "item.thony3dsmods.polish_cow_music_disk": "Disque",
+  "item.thony3dsmods.polish_cow_music_disk.desc": "Polish Cow - Polish Cow Dancing",
+  "item.thony3dsmods.dont_stop_the_fascism_music_disk": "Disque",
+  "item.thony3dsmods.dont_stop_the_fascism.desc": "Les Guignols - Don't Stop the Fascism !"
 }

@@ -1,6 +1,7 @@
 package com.thony3ds.item;
 
 import com.thony3ds.Thony3dsMods;
+import com.thony3ds.sound.Thony3dsModsSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.type.ConsumableComponent;
@@ -20,7 +21,12 @@ import java.util.function.Function;
 
 public class Thony3dsModsItems {
 
-
+    public static final Item APPELLE_SUR_MON_TELEPHONE_MUSIC_DISK = register("appelle_sur_mon_telephone_music_disk",
+            Item::new, new Item.Settings().jukeboxPlayable(Thony3dsModsSounds.APPELLE_SUR_MON_TELEPHONE_KEY).maxCount(1));
+    public static final Item POLISH_COW_MUSIC_DISK = register("polish_cow_music_disk",
+            Item::new, new Item.Settings().jukeboxPlayable(Thony3dsModsSounds.POLISH_COW_KEY).maxCount(1));
+    public static final Item DONT_STOP_THE_FASCISM_MUSIC_DISK = register("dont_stop_the_fascism_music_disk",
+            Item::new, new Item.Settings().jukeboxPlayable(Thony3dsModsSounds.DONT_STOP_THE_FASCHISM_KEY).maxCount(1));
     public static final Item COIN = register("coin", Item::new, new Item.Settings());
     public static final Item LOOTBOX1 = register("lb1", LootBox1::new, new Item.Settings());
     public static final Item LOOTBOX2 = register("lb2", LootBox2::new, new Item.Settings());

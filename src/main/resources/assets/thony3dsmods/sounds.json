@@ -1,0 +1,26 @@
+{
+  "appelle_sur_mon_telephone": {
+    "sounds": [
+      {
+        "name": "thony3dsmods:appelle_sur_mon_telephone",
+        "stream": true
+      }
+    ]
+  },
+  "polish_cow": {
+    "sounds": [
+      {
+        "name": "thony3dsmods:polish_cow",
+        "stream": true
+      }
+    ]
+  },
+  "dont_stop_the_fascism": {
+    "sounds": [
+      {
+        "name": "thony3dsmods:dont_stop_the_fascism",
+        "stream": true
+      }
+    ]
+  }
+}

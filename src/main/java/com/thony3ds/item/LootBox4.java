@@ -29,7 +29,7 @@ public class LootBox4 extends Item {
             new ItemStack(Items.WITHER_SKELETON_SKULL, 3),
             new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, 3),
             new ItemStack(Items.HEAVY_CORE),
-            new ItemStack(Items.MUSIC_DISC_OTHERSIDE)
+            new ItemStack(Thony3dsModsItems.POLISH_COW_MUSIC_DISK)
     );
 
 

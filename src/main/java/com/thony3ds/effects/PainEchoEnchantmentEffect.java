@@ -27,7 +27,9 @@ public record PainEchoEnchantmentEffect() implements EnchantmentEntityEffect {
     public void apply(ServerWorld world, int level, EnchantmentEffectContext context, Entity target, Vec3d pos) {
         if (context.owner() != null && context.owner() instanceof PlayerEntity player) {
             float dmg = (float) Math.floor((player.getMaxHealth() - player.getHealth()) / 2.0f);
-
+            if (dmg >= 20){
+                dmg = 18;
+            }
             if (target instanceof LivingEntity victim){
                 victim.damage(world, new DamageSource(
                         world.getRegistryManager()

@@ -5,10 +5,9 @@ Challenges:
  - Blindtest
  - Gamemode Adventure (/execute @a in dim run gamemode adventure @s | Cmd pour repasser en survival)
 
-Disk FALLEN
-SUCCES Random Master list des autres succes a check
+- Craft coeur Lifesteal
 
-- Mods D'opti / Lifesteal -canon ?
-
+### Music disk textures / test durée du son
+### bug bottom tale
 ### Patch Lootbox ??
 ### RELIRE LES SUCCES

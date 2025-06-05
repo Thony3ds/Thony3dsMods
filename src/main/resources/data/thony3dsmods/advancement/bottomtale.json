@@ -26,7 +26,8 @@
             }
           }
         }
-      ]
+      ],
+      "trigger": "minecraft:player_killed_entity"
     }
   },
   "requirements": [
