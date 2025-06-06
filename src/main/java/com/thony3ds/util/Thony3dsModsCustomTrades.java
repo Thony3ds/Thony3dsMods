@@ -87,42 +87,42 @@ public class Thony3dsModsCustomTrades {
                     factories.add((entity, random) -> new TradeOffer(
                             new TradedItem(Thony3dsModsItems.COIN, 32),
                             new ItemStack(Thony3dsModsItems.LOOTBOX4),
-                            9999, 3, 0.0f));
+                            9999, 4, 0.0f));
                 });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.FRANK_MASTER, 5,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new TradedItem(Thony3dsModsItems.VOITURE, 1),
                             new ItemStack(Thony3dsModsItems.COIN, 16),
-                            9999, 3, 0.0f));
+                            9999, 5, 0.0f));
                 });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.XUR_MASTER, 1,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new TradedItem(Thony3dsModsItems.STRANGE_COIN, 1),
                             new ItemStack(Thony3dsModsItems.BUILD_KIT, 4),
-                            9999, 3, 0.0f));
+                            9999, 1, 0.0f));
                 });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.XUR_MASTER, 1,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new TradedItem(Thony3dsModsItems.STRANGE_COIN, 1),
                             new ItemStack(Thony3dsModsItems.REDSTONE_KIT, 4),
-                            9999, 3, 0.0f));
+                            9999, 1, 0.0f));
                 });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.XUR_MASTER, 2,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new TradedItem(Thony3dsModsItems.STRANGE_COIN, 1),
                             new ItemStack(Thony3dsModsItems.BUILD_KIT, 8),
-                            9999, 3, 0.0f));
+                            9999, 2, 0.0f));
                 });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.XUR_MASTER, 2,
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new TradedItem(Thony3dsModsItems.STRANGE_COIN, 1),
                             new ItemStack(Thony3dsModsItems.REDSTONE_KIT, 8),
-                            9999, 3, 0.0f));
+                            9999, 2, 0.0f));
                 });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.XUR_MASTER, 3,
                 factories -> {

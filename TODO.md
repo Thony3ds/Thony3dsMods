@@ -8,4 +8,6 @@ Challenges:
 - Lifesteal to test / test dimension custom
 
 ### bug bottom tale
-### Patch Lootbox a tester
+### Patch Lootbox a faire
+### Lootbox loot a refaire
+### Xp des marchants / Level up xp

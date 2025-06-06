@@ -3,13 +3,13 @@
 	"id": "thony3dsmods",
 	"version": "${version}",
 	"name": "Thony3ds Mods",
-	"description": "Thony3ds Mods",
+	"description": "Thony3ds Mods for my custom Fabric Minecraft Server compatible with Minecraft 1.21.4",
 	"authors": [
 		"Thony3ds"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/Thony3ds/",
+		"sources": "https://github.com/Thony3ds/"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/thony3dsmods/icon.png",
