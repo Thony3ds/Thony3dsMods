@@ -9,12 +9,12 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RedstoneKit extends Item {
 
-    List<Item> redstoneItems = List.of(
+    public static List<Item> redstoneItems = new ArrayList<>(List.of(
             new ItemStack(Items.REDSTONE).getItem(),
             new ItemStack(Items.REDSTONE_BLOCK).getItem(),
             new ItemStack(Items.REDSTONE_TORCH).getItem(),
@@ -56,7 +56,7 @@ public class RedstoneKit extends Item {
             new ItemStack(Items.LIGHT).getItem(),
             new ItemStack(Items.BELL).getItem(),
             new ItemStack(Items.SCULK_CATALYST).getItem()
-    );
+    ));
 
     public RedstoneKit(Settings settings){
         super(settings);

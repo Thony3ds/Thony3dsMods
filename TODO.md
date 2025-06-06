@@ -7,7 +7,9 @@ Challenges:
 
 - Lifesteal to test / test dimension custom
 
-### bug bottom tale
 ### Patch Lootbox a faire
 ### Lootbox loot a refaire
-### Xp des marchants / Level up xp
+
+Ajouter la dépendance dans [Fabric.mod.json](src/main/resources/fabric.mod.json):
+"promenade": ">=5.0.1"
+Puis le succes Bureau

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "#T#",
+    "D#S"
+  ],
+  "key": {
+    "#": "minecraft:diamond_block",
+    "N": "minecraft:nether_star",
+    "T": "minecraft:totem_of_undying",
+    "D": "minecraft:dragon_breath",
+    "S": "minecraft:silence_armor_trim_smithing_template"
+  },
+  "result": {
+    "id": "thony3dsmods:heart",
+    "count": 1
+  }
+}

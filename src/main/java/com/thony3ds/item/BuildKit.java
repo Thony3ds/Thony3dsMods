@@ -9,12 +9,12 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BuildKit extends Item {
 
-    List<Item> decorationItems = List.of(
+    public static List<Item> decorationItems = new ArrayList<>(List.of(
             new ItemStack(Items.STONE).getItem(),
             new ItemStack(Items.GRANITE).getItem(),
             new ItemStack(Items.DIORITE).getItem(),
@@ -76,7 +76,7 @@ public class BuildKit extends Item {
             new ItemStack(Items.END_ROD).getItem(),
             new ItemStack(Items.IRON_BARS).getItem(),
             new ItemStack(Items.LADDER).getItem()
-    );
+    ));
 
 
     public BuildKit(Settings settings){
