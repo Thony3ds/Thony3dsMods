@@ -14,21 +14,17 @@ public abstract class LifeStealMixin {
     @Inject(method="onDeath", at= @At("HEAD"))
     public void onPlayerDeath(DamageSource source, CallbackInfo ci){
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
-        if (player.getAttributeInstance(EntityAttributes.MAX_HEALTH).getBaseValue() > 10 && !player.getWorld().getRegistryKey().toString().equals("eternity_trials")) {
-            int amount;
-            if ((int) player.getAttributeInstance(EntityAttributes.MAX_HEALTH).getBaseValue() == 11) {
-                amount = 1;
-            } else {
-                amount = 2;
-            }
+        if (!player.getWorld().getRegistryKey().toString().contains("thony3dsmods:eternity_trials")) {
             if (source.getAttacker() instanceof PlayerEntity attacker) {
-                player.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() - amount);
-                attacker.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() + amount);
+                player.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() - 2);
+                attacker.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() + 2);
                 if (attacker.getAttributeInstance(EntityAttributes.MAX_HEALTH).getBaseValue() > 40){
                     attacker.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(40);
+                }else if (player.getAttributeInstance(EntityAttributes.MAX_HEALTH).getBaseValue() < 10){
+                    attacker.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(10);
                 }
             } else {
-                player.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() - amount);
+                player.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() - 1);
             }
         }
     }
