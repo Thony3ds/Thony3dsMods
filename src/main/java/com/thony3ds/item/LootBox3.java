@@ -53,7 +53,7 @@ public class LootBox3 extends Item {
         }
 
         player.getInventory().getMainHandStack().decrement(1);
-        player.giveItemStack(LootboxLogic.getRandomItem(lootEpique));
+        player.giveItemStack(LootboxLogic.getRandomItem(3));
         return ActionResult.SUCCESS;
     }
 }

@@ -7,53 +7,78 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.math.BigDecimal;
 
 public class LootboxLogic {
 
-    private static final BigDecimal[] chances = {
+    private static final List<BigDecimal> chances = List.of(
             new BigDecimal("23"),
             new BigDecimal("10"), new BigDecimal("10"), new BigDecimal("10"), new BigDecimal("10"),
             new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"),
             new BigDecimal("2.5"), new BigDecimal("2.5"),
             new BigDecimal("1.955"), new BigDecimal("0.045")
-    };
+    );
 
+    private static final List<ItemStack> lootCommun = Collections.unmodifiableList(Arrays.asList(
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.IRON_INGOT, 16),
+            new ItemStack(Items.EMERALD, 16),
+            new ItemStack(Items.GOLD_INGOT, 16),
+            new ItemStack(Items.WOLF_SPAWN_EGG, 1),
+            new ItemStack(Items.BOOK, 16),
+            new ItemStack(Items.DIAMOND, 5),
+            new ItemStack(Items.GOLDEN_APPLE, 5),
+            new ItemStack(Items.COW_SPAWN_EGG, 1),
+            new ItemStack(Items.SHEEP_SPAWN_EGG, 1),
+            new ItemStack(Items.PIG_SPAWN_EGG, 1),
+            new ItemStack(Items.CHICKEN_SPAWN_EGG, 1),
+            new ItemStack(Items.FIREWORK_ROCKET, 64),
+            new ItemStack(Items.WOLF_ARMOR, 1),
+            new ItemStack(Items.ANCIENT_DEBRIS, 1)
+    ));
 
-    public static ItemStack getRandomItem(List<ItemStack> loot){
-        if (loot == null || loot.size() != chances.length) {
-            throw new IllegalArgumentException("La liste doit contenir exactement " + chances.length + " éléments.");
+    private static final List<ItemStack> lootRare = Collections.unmodifiableList(Arrays.asList(
+            new ItemStack(Items.IRON_INGOT, 32),
+            new ItemStack(Items.EMERALD, 32),
+            new ItemStack(Items.GOLD_INGOT, 32),
+            new ItemStack(Items.CARROT, 32),
+            new ItemStack(Items.VILLAGER_SPAWN_EGG, 1),
+            new ItemStack(Items.APPLE, 32),
+            new ItemStack(Items.NAME_TAG, 1),
+            new ItemStack(Items.SADDLE, 1),
+            new ItemStack(Items.HONEY_BOTTLE, 6),
+            new ItemStack(Items.VILLAGER_SPAWN_EGG, 3),
+            new ItemStack(Items.DIAMOND_BLOCK, 2),
+            new ItemStack(Items.ENDER_PEARL, 8),
+            new ItemStack(Items.TOTEM_OF_UNDYING, 1),
+            new ItemStack(Items.NETHERITE_SCRAP, 1),
+            new ItemStack(Items.NETHERITE_INGOT, 1)
+    ));
+
+    public static ItemStack getRandomItem(int type){
+        List<ItemStack> loot = switch (type){
+            case 1 -> lootCommun;
+            case 2 -> lootRare;
+            default -> lootCommun;
+        };
+
+        if (!(loot.size() == chances.size())){
+            throw new IllegalArgumentException("loot.size doit être égal a chances.size !!");
         }
+        BigDecimal rand = BigDecimal.valueOf(Math.random()).multiply(new BigDecimal("100"));
+        BigDecimal cumulative = BigDecimal.ZERO;
 
-        // Calcul du poids total avec BigDecimal
-        BigDecimal totalWeight = BigDecimal.ZERO;
-        for (BigDecimal chance : chances) {
-            totalWeight = totalWeight.add(chance);
-        }
-
-        // Génération d'une valeur aléatoire sur la plage du totalWeight
-        Random random = new Random();
-        BigDecimal randomValue = BigDecimal.valueOf(random.nextDouble()).multiply(totalWeight);
-
-        BigDecimal cumulativeWeight = BigDecimal.ZERO;
-        ItemStack selectedItem = loot.get(0); // Valeur par défaut
-
-        // Sélection de l'objet basé sur les probabilités corrigées
-        for (int i = 0; i < chances.length; i++) {
-            cumulativeWeight = cumulativeWeight.add(chances[i]);
-            if (randomValue.compareTo(cumulativeWeight) <= 0) {
-                selectedItem = loot.get(i);
-                break;
+        for (int i = 0;i < loot.size(); i++){
+            cumulative = cumulative.add(chances.get(i));
+            if (rand.compareTo(cumulative) <= 0){
+                return loot.get(i).copy();
             }
         }
-
-        if (selectedItem.isEmpty() || selectedItem.isOf(Items.AIR) || selectedItem.equals(new ItemStack(Items.AIR))){
-            selectedItem = loot.get(4);
-        }
-
-        return selectedItem;
+        return loot.get(1).copy();
     }
     public static boolean thematicBox(PlayerEntity player, List<Item> liste){
         ItemStack offHand = player.getOffHandStack();

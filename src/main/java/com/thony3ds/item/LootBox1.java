@@ -10,27 +10,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class LootBox1 extends Item {
-
-    private final List<ItemStack> lootCommun = Arrays.asList(
-            new ItemStack(Items.DIRT, 64),
-            new ItemStack(Items.IRON_INGOT, 16),
-            new ItemStack(Items.EMERALD, 16),
-            new ItemStack(Items.GOLD_INGOT, 16),
-            new ItemStack(Items.WOLF_SPAWN_EGG, 1),
-            new ItemStack(Items.BOOK, 16),
-            new ItemStack(Items.DIAMOND, 5),
-            new ItemStack(Items.GOLDEN_APPLE, 5),
-            new ItemStack(Items.COW_SPAWN_EGG, 1),
-            new ItemStack(Items.SHEEP_SPAWN_EGG, 1),
-            new ItemStack(Items.PIG_SPAWN_EGG, 1),
-            new ItemStack(Items.CHICKEN_SPAWN_EGG, 1),
-            new ItemStack(Items.FIREWORK_ROCKET, 64),
-            new ItemStack(Items.WOLF_ARMOR, 1),
-            new ItemStack(Items.ANCIENT_DEBRIS, 1)
-    );
 
     public LootBox1(Settings settings){
         super(settings);
@@ -41,8 +24,10 @@ public class LootBox1 extends Item {
             return ActionResult.PASS;
         }
 
+        player.getItemCooldownManager().set(new ItemStack(this), 20);
+
         player.getInventory().getMainHandStack().decrement(1);
-        player.giveItemStack(LootboxLogic.getRandomItem(lootCommun));
+        player.giveItemStack(LootboxLogic.getRandomItem(1 ));
         return ActionResult.SUCCESS;
     }
 }
