@@ -1,6 +1,6 @@
 package com.thony3ds.util;
 
-import com.thony3ds.Thony3dsMods;
+import com.thony3ds.item.Thony3dsModsItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
@@ -10,7 +10,6 @@ import net.minecraft.text.Text;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.math.BigDecimal;
 
 public class LootboxLogic {
@@ -59,10 +58,48 @@ public class LootboxLogic {
             new ItemStack(Items.NETHERITE_INGOT, 1)
     ));
 
+    private static final List<ItemStack> lootEpique = Collections.unmodifiableList(Arrays.asList(
+            new ItemStack(Items.BLAZE_ROD, 16),
+            new ItemStack(Items.NETHER_WART, 16),
+            new ItemStack(Items.BONE_BLOCK, 32),
+            new ItemStack(Items.ECHO_SHARD, 2),
+            new ItemStack(Items.SOUL_SAND, 32),
+            new ItemStack(Items.SHULKER_SHELL, 4),
+            new ItemStack(Items.EVOKER_SPAWN_EGG),
+            new ItemStack(Items.GOLDEN_APPLE, 32),
+            new ItemStack(Items.SHULKER_BOX, 1),
+            new ItemStack(Items.EXPERIENCE_BOTTLE, 32),
+            new ItemStack(Items.OMINOUS_BOTTLE, 1),
+            new ItemStack(Items.NETHERITE_SCRAP, 3),
+            new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1),
+            new ItemStack(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE, 1),
+            new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, 1)
+    ));
+
+    private static final List<ItemStack> lootLegendaire = Collections.unmodifiableList(Arrays.asList(
+            new ItemStack(Items.SHULKER_BOX, 5),
+            new ItemStack(Items.WITHER_ROSE, 3),
+            new ItemStack(Items.GHAST_TEAR, 3),
+            new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1),
+            new ItemStack(Items.DIAMOND_HORSE_ARMOR),
+            new ItemStack(Items.TOTEM_OF_UNDYING),
+            new ItemStack(Items.NETHERITE_INGOT, 3),
+            new ItemStack(Items.DRAGON_HEAD, 1),
+            new ItemStack(Items.DIAMOND_BLOCK, 32),
+            new ItemStack(Items.TRIAL_KEY),
+            new ItemStack(Items.OMINOUS_TRIAL_KEY),
+            new ItemStack(Items.WITHER_SKELETON_SKULL, 3),
+            new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, 3),
+            new ItemStack(Items.HEAVY_CORE),
+            new ItemStack(Thony3dsModsItems.POLISH_COW_MUSIC_DISK)
+    ));
+
     public static ItemStack getRandomItem(int type){
         List<ItemStack> loot = switch (type){
             case 1 -> lootCommun;
             case 2 -> lootRare;
+            case 3 -> lootEpique;
+            case 4 -> lootLegendaire;
             default -> lootCommun;
         };
 

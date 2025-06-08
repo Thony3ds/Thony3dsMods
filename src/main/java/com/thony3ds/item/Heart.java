@@ -21,7 +21,7 @@ public class Heart extends Item {
             return ActionResult.PASS;
         }
 
-        if (player.getMaxHealth() < 40) {
+        if (!(player.getMaxHealth() >= 39)) {
             player.getInventory().getMainHandStack().decrement(1);
             player.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() + 2);
         }else{

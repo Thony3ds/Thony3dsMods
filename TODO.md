@@ -5,7 +5,6 @@ Challenges:
  - Blindtest
  - Gamemode Adventure (/execute @a in dim run gamemode adventure @s | Cmd pour repasser en survival)
 
-- Lifesteal to test PVP
+- Lifesteal to test PVP / add coeur / withdraw
 
-### Patch Lootbox a faire
 ### Lootbox loot a refaire
