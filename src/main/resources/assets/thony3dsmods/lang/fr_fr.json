@@ -31,5 +31,11 @@
   "item.thony3dsmods.polish_cow_music_disk": "Disque",
   "item.thony3dsmods.polish_cow_music_disk.desc": "Polish Cow - Polish Cow Dancing",
   "item.thony3dsmods.dont_stop_the_fascism_music_disk": "Disque",
-  "item.thony3dsmods.dont_stop_the_fascism.desc": "Les Guignols - Don't Stop the Fascism !"
+  "item.thony3dsmods.dont_stop_the_fascism.desc": "Les Guignols - Don't Stop the Fascism !",
+  "effect.thony3dsmods.xp_potion": "Xp Boost",
+  "item.minecraft.potion.effect.xp_potion": "Potion d'Xp Boost",
+  "item.minecraft.splash_potion.effect.xp_potion": "Potion d'Xp Boost jetable",
+  "item.minecraft.lingering_potion.effect.xp_potion": "Potion d'Xp Boost persistante",
+  "item.minecraft.tipped_arrow.effect.xp_potion": "Flèche d'Xp Boost",
+  "item.thony3dsmods.villager_shop_block": "Bloc de Boutique de Villageois"
 }

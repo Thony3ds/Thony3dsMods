@@ -6,7 +6,8 @@
     "LifeStealMixin",
     "ServerPlayerEntityMixin",
     "Thony3dsModsMixin",
-    "VillagerMixin"
+    "VillagerMixin",
+    "XpBoostMixin"
   ],
   "injectors": {
     "defaultRequire": 1

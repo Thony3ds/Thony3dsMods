@@ -4,6 +4,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.thony3ds.item.BuildKit;
 import com.thony3ds.item.RedstoneKit;
+import com.thony3ds.util.LootboxLogic;
 import net.minecraft.command.argument.ItemStackArgument;
 import net.minecraft.command.argument.ItemStackArgumentType;
 import net.minecraft.item.Item;
@@ -20,11 +21,11 @@ public class AddKitItem {
         ItemStackArgument itemArg = ItemStackArgumentType.getItemStackArgument(context, "item");
         Item item = itemArg.getItem();
 
-        if (Objects.equals(type, "redstone") && !RedstoneKit.redstoneItems.contains(item)){
-            RedstoneKit.redstoneItems.add(item);
+        if (Objects.equals(type, "redstone") && !LootboxLogic.redstoneItems.contains(item)){
+            LootboxLogic.redstoneItems.add(item);
             context.getSource().sendFeedback(() -> Text.literal("New Item: "+ item.getName() + " has been added in the Redstone Kit !"), true);
-        }else if (Objects.equals(type, "build") && !BuildKit.decorationItems.contains(item)){
-            BuildKit.decorationItems.add(new ItemStack(item).getItem());
+        }else if (Objects.equals(type, "build") && !LootboxLogic.decorationItems.contains(item)){
+            LootboxLogic.decorationItems.add(new ItemStack(item).getItem());
             context.getSource().sendFeedback(() -> Text.literal("New Item: "+ item.getName() + " has been added in the Build Kit !"), true);
         }else{
             if (Objects.equals(type, "redstone")) {

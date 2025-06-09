@@ -7,6 +7,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -94,9 +95,115 @@ public class LootboxLogic {
             new ItemStack(Thony3dsModsItems.POLISH_COW_MUSIC_DISK)
     ));
 
+    public static List<Item> redstoneItems = new ArrayList<>(List.of(
+            new ItemStack(Items.REDSTONE).getItem(),
+            new ItemStack(Items.REDSTONE_BLOCK).getItem(),
+            new ItemStack(Items.REDSTONE_TORCH).getItem(),
+            new ItemStack(Items.REDSTONE_LAMP).getItem(),
+            new ItemStack(Items.REPEATER).getItem(),
+            new ItemStack(Items.COMPARATOR).getItem(),
+            new ItemStack(Items.OBSERVER).getItem(),
+            new ItemStack(Items.PISTON).getItem(),
+            new ItemStack(Items.STICKY_PISTON).getItem(),
+            new ItemStack(Items.SLIME_BLOCK).getItem(),
+            new ItemStack(Items.HONEY_BLOCK).getItem(),
+            new ItemStack(Items.TARGET).getItem(),
+            new ItemStack(Items.DISPENSER).getItem(),
+            new ItemStack(Items.DROPPER).getItem(),
+            new ItemStack(Items.HOPPER).getItem(),
+            new ItemStack(Items.HOPPER_MINECART).getItem(),
+            new ItemStack(Items.CHEST_MINECART).getItem(),
+            new ItemStack(Items.FURNACE_MINECART).getItem(),
+            new ItemStack(Items.ACTIVATOR_RAIL).getItem(),
+            new ItemStack(Items.DETECTOR_RAIL).getItem(),
+            new ItemStack(Items.POWERED_RAIL).getItem(),
+            new ItemStack(Items.RAIL).getItem(),
+            new ItemStack(Items.LEVER).getItem(),
+            new ItemStack(Items.STONE_BUTTON).getItem(),
+            new ItemStack(Items.OAK_BUTTON).getItem(),
+            new ItemStack(Items.STONE_PRESSURE_PLATE).getItem(),
+            new ItemStack(Items.HEAVY_WEIGHTED_PRESSURE_PLATE).getItem(),
+            new ItemStack(Items.LIGHT_WEIGHTED_PRESSURE_PLATE).getItem(),
+            new ItemStack(Items.TRIPWIRE_HOOK).getItem(),
+            new ItemStack(Items.NOTE_BLOCK).getItem(),
+            new ItemStack(Items.COMMAND_BLOCK).getItem(),
+            new ItemStack(Items.REPEATING_COMMAND_BLOCK).getItem(),
+            new ItemStack(Items.CHAIN_COMMAND_BLOCK).getItem(),
+            new ItemStack(Items.STRUCTURE_BLOCK).getItem(),
+            new ItemStack(Items.SPAWNER).getItem(),
+            new ItemStack(Items.SCULK_SENSOR).getItem(),
+            new ItemStack(Items.SCULK_SHRIEKER).getItem(),
+            new ItemStack(Items.DAYLIGHT_DETECTOR).getItem(),
+            new ItemStack(Items.LIGHT).getItem(),
+            new ItemStack(Items.BELL).getItem(),
+            new ItemStack(Items.SCULK_CATALYST).getItem()
+    ));
+    public static List<Item> decorationItems = new ArrayList<>(List.of(
+            new ItemStack(Items.STONE).getItem(),
+            new ItemStack(Items.GRANITE).getItem(),
+            new ItemStack(Items.DIORITE).getItem(),
+            new ItemStack(Items.ANDESITE).getItem(),
+            new ItemStack(Items.COBBLESTONE).getItem(),
+            new ItemStack(Items.BRICKS).getItem(),
+            new ItemStack(Items.STONE_BRICKS).getItem(),
+            new ItemStack(Items.MOSSY_STONE_BRICKS).getItem(),
+            new ItemStack(Items.SMOOTH_STONE).getItem(),
+            new ItemStack(Items.SMOOTH_SANDSTONE).getItem(),
+            new ItemStack(Items.SMOOTH_QUARTZ).getItem(),
+            new ItemStack(Items.POLISHED_GRANITE).getItem(),
+            new ItemStack(Items.POLISHED_DIORITE).getItem(),
+            new ItemStack(Items.POLISHED_ANDESITE).getItem(),
+            new ItemStack(Items.WHITE_TERRACOTTA).getItem(),
+            new ItemStack(Items.ORANGE_TERRACOTTA).getItem(),
+            new ItemStack(Items.MAGENTA_TERRACOTTA).getItem(),
+            new ItemStack(Items.LIGHT_BLUE_TERRACOTTA).getItem(),
+            new ItemStack(Items.YELLOW_TERRACOTTA).getItem(),
+            new ItemStack(Items.LIME_TERRACOTTA).getItem(),
+            new ItemStack(Items.PINK_TERRACOTTA).getItem(),
+            new ItemStack(Items.GRAY_TERRACOTTA).getItem(),
+            new ItemStack(Items.LIGHT_GRAY_TERRACOTTA).getItem(),
+            new ItemStack(Items.CYAN_TERRACOTTA).getItem(),
+            new ItemStack(Items.PURPLE_TERRACOTTA).getItem(),
+            new ItemStack(Items.BLUE_TERRACOTTA).getItem(),
+            new ItemStack(Items.BROWN_TERRACOTTA).getItem(),
+            new ItemStack(Items.GREEN_TERRACOTTA).getItem(),
+            new ItemStack(Items.RED_TERRACOTTA).getItem(),
+            new ItemStack(Items.BLACK_TERRACOTTA).getItem(),
+            new ItemStack(Items.GLOWSTONE).getItem(),
+            new ItemStack(Items.SEA_LANTERN).getItem(),
+            new ItemStack(Items.LANTERN).getItem(),
+            new ItemStack(Items.SOUL_LANTERN).getItem(),
+            new ItemStack(Items.PAINTING).getItem(),
+            new ItemStack(Items.FLOWER_POT).getItem(),
+            new ItemStack(Items.BOOKSHELF).getItem(),
+            new ItemStack(Items.CHISELED_BOOKSHELF).getItem(),
+            new ItemStack(Items.TORCH).getItem(),
+            new ItemStack(Items.SOUL_TORCH).getItem(),
+            new ItemStack(Items.CANDLE).getItem(),
+            new ItemStack(Items.WHITE_CANDLE).getItem(),
+            new ItemStack(Items.YELLOW_CANDLE).getItem(),
+            new ItemStack(Items.BLUE_CANDLE).getItem(),
+            new ItemStack(Items.PURPLE_CANDLE).getItem(),
+            new ItemStack(Items.RED_CANDLE).getItem(),
+            new ItemStack(Items.GREEN_CANDLE).getItem(),
+            new ItemStack(Items.BLACK_CANDLE).getItem(),
+            new ItemStack(Items.LECTERN).getItem(),
+            new ItemStack(Items.BELL).getItem(),
+            new ItemStack(Items.BARREL).getItem(),
+            new ItemStack(Items.CHEST).getItem(),
+            new ItemStack(Items.CAMPFIRE).getItem(),
+            new ItemStack(Items.SOUL_CAMPFIRE).getItem(),
+            new ItemStack(Items.STONECUTTER).getItem(),
+            new ItemStack(Items.ANVIL).getItem(),
+            new ItemStack(Items.FLOWER_POT).getItem(),
+            new ItemStack(Items.WHITE_BANNER).getItem(),
+            new ItemStack(Items.END_ROD).getItem(),
+            new ItemStack(Items.IRON_BARS).getItem(),
+            new ItemStack(Items.LADDER).getItem()
+    ));
+
     public static ItemStack getRandomItem(int type){
         List<ItemStack> loot = switch (type){
-            case 1 -> lootCommun;
             case 2 -> lootRare;
             case 3 -> lootEpique;
             case 4 -> lootLegendaire;
@@ -117,7 +224,13 @@ public class LootboxLogic {
         }
         return loot.get(1).copy();
     }
-    public static boolean thematicBox(PlayerEntity player, List<Item> liste){
+    public static boolean thematicBox(PlayerEntity player, int type){
+        List<Item> liste = switch (type){
+            case 1 -> redstoneItems;
+            case 2 -> decorationItems;
+            default -> List.of(Items.CAKE);
+        };
+
         ItemStack offHand = player.getOffHandStack();
         if (offHand == null || offHand.equals(new ItemStack(Items.AIR))){
             player.sendMessage(Text.of("Tu dois avoir un bloc décoratif dans ta deuxième main !"), false);

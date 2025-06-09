@@ -10,8 +10,9 @@ import com.thony3ds.commands.PunishLifesteal;
 import com.thony3ds.commands.WithDraw;
 import com.thony3ds.criterions.Thony3dsModsCriteria;
 import com.thony3ds.datagen.Thony3dsModsItemGroup;
-import com.thony3ds.effects.Thony3dsModsEnchantmentEffects;
+import com.thony3ds.effects.Thony3dsModsEffects;
 import com.thony3ds.item.Thony3dsModsItems;
+import com.thony3ds.item.Thony3dsModsPotions;
 import com.thony3ds.sound.Thony3dsModsSounds;
 import com.thony3ds.util.Thony3dsModsCustomTrades;
 import com.thony3ds.villager.Thony3dsModsVillagers;
@@ -53,7 +54,8 @@ public final class Thony3dsMods implements ModInitializer {
 			Thony3dsModsCriteria.JOIN_GAME.trigger(player.getPlayer());
 		});
 
-		Thony3dsModsEnchantmentEffects.registerModEnchantmentEffects();
+		Thony3dsModsEffects.registerModEnchantmentEffects();
+		Thony3dsModsPotions.initialize();
 		Thony3dsModsVillagers.registerVillagers();
 		Thony3dsModsCustomTrades.registerCustomTrades();
 		Thony3dsModsItemGroup.initialize();

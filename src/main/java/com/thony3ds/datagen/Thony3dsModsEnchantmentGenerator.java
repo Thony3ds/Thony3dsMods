@@ -2,7 +2,7 @@ package com.thony3ds.datagen;
 
 import com.thony3ds.effects.PainEchoEnchantmentEffect;
 import com.thony3ds.effects.ShulkerEnchantmentEffect;
-import com.thony3ds.effects.Thony3dsModsEnchantmentEffects;
+import com.thony3ds.effects.Thony3dsModsEffects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition;
@@ -26,7 +26,7 @@ public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvi
     @Override
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
         // Our new enchantment, "Thundering."
-        register(entries, Thony3dsModsEnchantmentEffects.CURSE_SHULKER, Enchantment.builder(
+        register(entries, Thony3dsModsEffects.CURSE_SHULKER, Enchantment.builder(
                                 Enchantment.definition(
                                         registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                                         // this is the "weight" or probability of our enchantment showing up in the table
@@ -52,7 +52,7 @@ public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvi
                         )
         );
 
-        register(entries, Thony3dsModsEnchantmentEffects.PAIN_ECHO, Enchantment.builder(
+        register(entries, Thony3dsModsEffects.PAIN_ECHO, Enchantment.builder(
                                 Enchantment.definition(
                                         registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ItemTags.SWORD_ENCHANTABLE),
                                         // this is the "weight" or probability of our enchantment showing up in the table

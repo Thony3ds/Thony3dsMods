@@ -1,38 +1,19 @@
 package com.thony3ds.util;
 
-import com.google.common.collect.ImmutableMap;
 import com.thony3ds.Thony3dsMods;
-import com.thony3ds.datagen.Thony3dsModsEnchantmentGenerator;
-import com.thony3ds.effects.PainEchoEnchantmentEffect;
-import com.thony3ds.effects.Thony3dsModsEnchantmentEffects;
 import com.thony3ds.item.Thony3dsModsItems;
 import com.thony3ds.villager.Thony3dsModsVillagers;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
-import net.minecraft.component.EnchantmentEffectComponentTypes;
-import net.minecraft.component.type.AttributeModifierSlot;
-import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.EnchantmentLevelEntry;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.enchantment.effect.EnchantmentEffectTarget;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradedItem;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 
 public class Thony3dsModsCustomTrades {
