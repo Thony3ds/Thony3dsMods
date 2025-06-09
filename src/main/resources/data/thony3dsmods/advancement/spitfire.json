@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:crossbow",
+      "count": 1
+    },
+    "title": "SpitFire !",
+    "description": "La seule arme du jeu qui est bien (avec la Odin !)",
+    "background": null,
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "thony3dsmods:speak_frank",
+  "criteria": {
+    "spitfire": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:enchantments": [
+              {
+                "enchantments": "minecraft:quick_charge",
+                "levels": 3
+              },
+              {
+                "enchantments": "minecraft:piercing",
+                "levels": 4
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "spitfire"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}
