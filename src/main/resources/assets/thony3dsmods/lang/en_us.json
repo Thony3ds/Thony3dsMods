@@ -37,5 +37,13 @@
   "item.minecraft.splash_potion.effect.xp_potion": "Xp Boost Splash Potion",
   "item.minecraft.lingering_potion.effect.xp_potion": "Xp Boost Lingering Potion",
   "item.minecraft.tipped_arrow.effect.xp_potion": "Xp Boost Arrow",
-  "item.thony3dsmods.villager_shop_block": "Villager Shop Block"
+  "item.thony3dsmods.villager_shop_block": "Villager Shop Block",
+  "item.minecraft.potion.effect.xp_potion3": "Xp Boost Potion",
+  "item.minecraft.splash_potion.effect.xp_potion3": "Xp Boost Splash Potion",
+  "item.minecraft.lingering_potion.effect.xp_potion3": "Xp Boost Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.xp_potion3": "Xp Boost Arrow",
+  "item.minecraft.potion.effect.xp_potion2": "Xp Boost Potion",
+  "item.minecraft.splash_potion.effect.xp_potion2": "Xp Boost Splash Potion",
+  "item.minecraft.lingering_potion.effect.xp_potion2": "Xp Boost Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.xp_potion2": "Xp Boost Arrow"
 }

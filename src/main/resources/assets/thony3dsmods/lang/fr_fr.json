@@ -37,5 +37,13 @@
   "item.minecraft.splash_potion.effect.xp_potion": "Potion d'Xp Boost jetable",
   "item.minecraft.lingering_potion.effect.xp_potion": "Potion d'Xp Boost persistante",
   "item.minecraft.tipped_arrow.effect.xp_potion": "Flèche d'Xp Boost",
-  "item.thony3dsmods.villager_shop_block": "Bloc de Boutique de Villageois"
+  "item.thony3dsmods.villager_shop_block": "Bloc de Boutique de Villageois",
+  "item.minecraft.potion.effect.xp_potion2": "Potion d'Xp Boost",
+  "item.minecraft.splash_potion.effect.xp_potion2": "Potion d'Xp Boost jetable",
+  "item.minecraft.lingering_potion.effect.xp_potion2": "Potion d'Xp Boost persistante",
+  "item.minecraft.tipped_arrow.effect.xp_potion2": "Flèche d'Xp Boost",
+  "item.minecraft.potion.effect.xp_potion3": "Potion d'Xp Boost",
+  "item.minecraft.splash_potion.effect.xp_potion3": "Potion d'Xp Boost jetable",
+  "item.minecraft.lingering_potion.effect.xp_potion3": "Potion d'Xp Boost persistante",
+  "item.minecraft.tipped_arrow.effect.xp_potion3": "Flèche d'Xp Boost"
 }

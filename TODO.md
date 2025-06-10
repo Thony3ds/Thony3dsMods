@@ -6,5 +6,3 @@ Challenges:
  - Gamemode Adventure (/execute @a in dim run gamemode adventure @s | Cmd pour repasser en survival)
 
 - Lifesteal to test PVP / add coeur / withdraw
-
-### Lootbox loot a refaire

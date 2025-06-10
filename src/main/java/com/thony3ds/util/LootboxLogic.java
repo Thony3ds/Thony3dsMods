@@ -85,7 +85,7 @@ public class LootboxLogic {
             new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1),
             new ItemStack(Items.DIAMOND_HORSE_ARMOR),
             new ItemStack(Items.OMINOUS_BOTTLE),
-            new ItemStack(Items.SNIFFER_EGG, 1),
+            new ItemStack(Items.ELYTRA, 1),
             new ItemStack(Items.END_CRYSTAL, 1),
             new ItemStack(Items.DRAGON_HEAD, 1),
             new ItemStack(Items.GHAST_TEAR, 3),

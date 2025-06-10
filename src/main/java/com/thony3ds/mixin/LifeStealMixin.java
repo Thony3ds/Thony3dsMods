@@ -1,13 +1,11 @@
 package com.thony3ds.mixin;
 
-import com.thony3ds.Thony3dsMods;
-import net.minecraft.entity.Entity;
+import com.thony3ds.util.KeepInventory;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -36,5 +34,10 @@ public abstract class LifeStealMixin {
                 player.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() - 1);
             }
         }
+    }
+    @Inject(method="onDeath", at=@At("HEAD"))
+    public void keepInventoryOnVoidDeath(DamageSource source, CallbackInfo ci){
+        ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
+        KeepInventory.onPlayerDeath(player, source);
     }
 }

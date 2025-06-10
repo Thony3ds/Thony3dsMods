@@ -14,6 +14,7 @@ import com.thony3ds.effects.Thony3dsModsEffects;
 import com.thony3ds.item.Thony3dsModsItems;
 import com.thony3ds.item.Thony3dsModsPotions;
 import com.thony3ds.sound.Thony3dsModsSounds;
+import com.thony3ds.util.KeepInventory;
 import com.thony3ds.util.Thony3dsModsCustomTrades;
 import com.thony3ds.villager.Thony3dsModsVillagers;
 import net.fabricmc.api.ModInitializer;
@@ -59,6 +60,7 @@ public final class Thony3dsMods implements ModInitializer {
 		Thony3dsModsVillagers.registerVillagers();
 		Thony3dsModsCustomTrades.registerCustomTrades();
 		Thony3dsModsItemGroup.initialize();
+		KeepInventory.initializePlayerRespawn();
 
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
 			dispatcher.register(CommandManager.literal("withdraw")
