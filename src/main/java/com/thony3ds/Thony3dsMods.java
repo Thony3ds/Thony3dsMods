@@ -4,10 +4,7 @@ import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.suggestion.SuggestionProvider;
 import com.thony3ds.block.Thony3dsModsBlocks;
-import com.thony3ds.commands.AddKitItem;
-import com.thony3ds.commands.KitTypeSuggestionProvider;
-import com.thony3ds.commands.PunishLifesteal;
-import com.thony3ds.commands.WithDraw;
+import com.thony3ds.commands.*;
 import com.thony3ds.criterions.Thony3dsModsCriteria;
 import com.thony3ds.datagen.Thony3dsModsItemGroup;
 import com.thony3ds.effects.Thony3dsModsEffects;
@@ -81,6 +78,11 @@ public final class Thony3dsMods implements ModInitializer {
 					.then(CommandManager.argument("kit_type", StringArgumentType.string()).suggests(KitTypeSuggestionProvider)
 							.then(CommandManager.argument("item", ItemStackArgumentType.itemStack(registryAccess))
 								.executes(AddKitItem::executeCommand))));
+		});
+		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+			dispatcher.register(CommandManager.literal("tp_spawn")
+					.requires(ServerCommandSource::isExecutedByPlayer)
+							.executes(TpSpawn::executeCommand));
 		});
 		LOGGER.info("Thony3dsMods Loaded !");
 	}

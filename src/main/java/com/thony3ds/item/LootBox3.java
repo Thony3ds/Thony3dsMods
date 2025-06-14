@@ -14,16 +14,21 @@ public class LootBox3 extends Item {
     public LootBox3(Settings settings){
         super(settings);
     }
-    @Override
     public ActionResult use(World world, PlayerEntity player, Hand hand){
-        if (world.isClient || player.getInventory().getMainHandStack().isEmpty()){
-            return ActionResult.PASS;
+        if (!world.isClient && !player.getStackInHand(hand).isEmpty()) {
+
+            player.getItemCooldownManager().set(player.getStackInHand(hand), 20);
+            player.getStackInHand(hand).decrement(1);
+
+            ItemStack itemStack = LootboxLogic.getRandomItem(3);
+
+            if (!player.getInventory().insertStack(itemStack)) {
+                player.dropItem(itemStack, false);
+            }
+
+            return ActionResult.SUCCESS;
         }
 
-        player.getItemCooldownManager().set(new ItemStack(this), 20);
-
-        player.getInventory().getMainHandStack().decrement(1);
-        player.giveItemStack(LootboxLogic.getRandomItem(3));
-        return ActionResult.SUCCESS;
+        return ActionResult.PASS;
     }
 }

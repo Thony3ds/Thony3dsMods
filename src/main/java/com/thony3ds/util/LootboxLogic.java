@@ -1,5 +1,6 @@
 package com.thony3ds.util;
 
+import com.thony3ds.Thony3dsMods;
 import com.thony3ds.item.Thony3dsModsItems;
 import com.thony3ds.item.Thony3dsModsPotions;
 import net.minecraft.item.Item;
@@ -23,6 +24,25 @@ public class LootboxLogic {
             new BigDecimal("2.5"), new BigDecimal("2.5"),
             new BigDecimal("1.955"), new BigDecimal("0.045")
     );
+
+    private static final List<ItemStack> fallbackLoot = Collections.unmodifiableList(Arrays.asList(
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64),
+            new ItemStack(Items.DIRT, 64)
+    ));
 
     private static final List<ItemStack> lootCommun = Collections.unmodifiableList(Arrays.asList(
             new ItemStack(Items.DIRT, 64),
@@ -205,10 +225,11 @@ public class LootboxLogic {
 
     public static ItemStack getRandomItem(int type){
         List<ItemStack> loot = switch (type){
+            case 1 -> lootCommun;
             case 2 -> lootRare;
             case 3 -> lootEpique;
             case 4 -> lootLegendaire;
-            default -> lootCommun;
+            default -> fallbackLoot;
         };
 
         if (!(loot.size() == chances.size())){
