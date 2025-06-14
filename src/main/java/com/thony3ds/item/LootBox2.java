@@ -4,6 +4,9 @@ import com.thony3ds.util.LootboxLogic;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
@@ -21,8 +24,13 @@ public class LootBox2 extends Item {
 
             ItemStack itemStack = LootboxLogic.getRandomItem(2);
 
-            if (!player.getInventory().insertStack(itemStack)) {
-                player.dropItem(itemStack, false);
+            String commande = "give @s "+ Registries.ITEM.getId(itemStack.getItem()).toString() + " "+ itemStack.getCount();
+            MinecraftServer server = player.getServer();
+
+            ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) player;
+
+            if (server != null) {
+                server.getCommandManager().executeWithPrefix(serverPlayerEntity.getCommandSource(), commande);
             }
 
             return ActionResult.SUCCESS;
