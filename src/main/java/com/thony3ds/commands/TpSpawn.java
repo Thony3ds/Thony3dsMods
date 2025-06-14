@@ -37,12 +37,13 @@ public class TpSpawn {
             ServerWorld overworld = server.getWorld(World.OVERWORLD);
 
             if (overworld != null) {
-                Set<PositionFlag> flags = EnumSet.of(
-                        PositionFlag.X, PositionFlag.Y, PositionFlag.Z,
-                        PositionFlag.Y_ROT, PositionFlag.X_ROT
-                );
 
-                player.teleport(overworld, 0.0, 92.0, 0.0, flags, player.getYaw(), player.getPitch(), false);
+                player.teleport(overworld,  0.0, 92.0, 0.0,
+                        EnumSet.of(
+                                PositionFlag.X, PositionFlag.Y, PositionFlag.Z,
+                                PositionFlag.Y_ROT, PositionFlag.X_ROT
+                        ),
+                        0.0f, 0.0f, false);
                 CooldownManager.recordUse(uuid);
                 player.sendMessage(Text.of("Téléporté au spawn !"), false);
                 return 1;

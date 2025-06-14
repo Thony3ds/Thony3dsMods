@@ -22,7 +22,7 @@ public class Thony3dsModsCustomTrades {
                 factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.IRON_INGOT, 16),
-                    new ItemStack(Thony3dsModsItems.LOOTBOX1),
+                    new ItemStack(Thony3dsModsItems.LOOTBOX1, 2),
                     9999, 1, 0.0f));
                 });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.FRANK_MASTER, 2,
