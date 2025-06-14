@@ -33,21 +33,13 @@ public class TpSpawn {
                 return 0;
             }
 
+            String commande = "execute in minecraft:overworld run tp @s 0 92 0";
             MinecraftServer server = player.getServer();
-            ServerWorld overworld = server.getWorld(World.OVERWORLD);
 
-            if (overworld != null) {
-
-                player.teleport(overworld,  0.0, 92.0, 0.0,
-                        EnumSet.of(
-                                PositionFlag.X, PositionFlag.Y, PositionFlag.Z,
-                                PositionFlag.Y_ROT, PositionFlag.X_ROT
-                        ),
-                        0.0f, 0.0f, false);
-                CooldownManager.recordUse(uuid);
-                player.sendMessage(Text.of("Téléporté au spawn !"), false);
-                return 1;
+            if (server != null) {
+                server.getCommandManager().executeWithPrefix(player.getCommandSource(), commande);
             }
+
         }
 
         source.sendError(Text.literal("Impossible de téléporter le joueur."));
