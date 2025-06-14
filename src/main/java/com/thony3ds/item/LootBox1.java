@@ -27,14 +27,7 @@ public class LootBox1 extends Item {
 
             ItemStack itemStack = LootboxLogic.getRandomItem(1);
 
-            String commande = "give @s "+ Registries.ITEM.getId(itemStack.getItem()).toString() + " "+ itemStack.getCount();
-            MinecraftServer server = player.getServer();
-
-            ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) player;
-
-            if (server != null) {
-                server.getCommandManager().executeWithPrefix(serverPlayerEntity.getCommandSource(), commande);
-            }
+            player.giveItemStack(itemStack);
 
             return ActionResult.SUCCESS;
         }

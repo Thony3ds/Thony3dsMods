@@ -37,7 +37,7 @@ public class TpSpawn {
             MinecraftServer server = player.getServer();
 
             if (server != null) {
-                server.getCommandManager().executeWithPrefix(player.getCommandSource(), commande);
+                server.getCommandManager().executeWithPrefix(player.getCommandSource().withLevel(4), commande);
             }
 
         }
