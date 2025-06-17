@@ -1,11 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#N#",
+    "ANA",
     "#T#",
     "D#S"
   ],
   "key": {
+    "A": "thony3dsmods:pizza",
     "#": "minecraft:diamond_block",
     "N": "minecraft:nether_star",
     "T": "minecraft:totem_of_undying",

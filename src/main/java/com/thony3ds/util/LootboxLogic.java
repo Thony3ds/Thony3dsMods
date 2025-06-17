@@ -22,7 +22,7 @@ public class LootboxLogic {
             new BigDecimal("10"), new BigDecimal("10"), new BigDecimal("10"), new BigDecimal("10"),
             new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"),
             new BigDecimal("2.5"), new BigDecimal("2.5"),
-            new BigDecimal("1.955"), new BigDecimal("0.045")
+            new BigDecimal("1"), new BigDecimal("1")
     );
 
     private static final List<ItemStack> fallbackLoot = Collections.unmodifiableList(Arrays.asList(

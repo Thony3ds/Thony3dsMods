@@ -1,11 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " #G",
+    "A#G",
     "#L#",
     "D#D"
   ],
   "key": {
+    "A": "minecraft:daylight_detector",
     "#": "minecraft:iron_block",
     "G": "minecraft:glass",
     "L": "minecraft:lightning_rod",

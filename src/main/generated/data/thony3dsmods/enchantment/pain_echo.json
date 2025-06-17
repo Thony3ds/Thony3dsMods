@@ -26,6 +26,6 @@
   "slots": [
     "hand"
   ],
-  "supported_items": "#minecraft:enchantable/sword",
+  "supported_items": "#minecraft:enchantable/fire_aspect",
   "weight": 1
 }

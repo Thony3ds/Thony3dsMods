@@ -11,6 +11,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageType;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.RegistryKey;
@@ -48,14 +50,11 @@ public record PainEchoEnchantmentEffect() implements EnchantmentEntityEffect {
                 }
 
             if (level == 2){
-                player.setHealth(player.getHealth() + 1);
-                if (mainHandItem.isDamageable()) { // Vérifie si l'item a une durabilité
-                    mainHandItem.damage(2, player); // Ajoute 5 points d'usure
-                }
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 30, 0, false, false));
             }else if (level == 3){
-                player.setHealth(player.getHealth() + 2);
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 40, 1, false, false));
                 if (mainHandItem.isDamageable()) { // Vérifie si l'item a une durabilité
-                    mainHandItem.damage(3, player); // Ajoute 5 points d'usure
+                    mainHandItem.damage(1, player); // Ajoute des points d'usure
                 }
             }
         }

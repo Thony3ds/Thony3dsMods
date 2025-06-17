@@ -29,7 +29,7 @@ public class TpSpawn {
             if (!CooldownManager.canUse(uuid)) {
                 long timeLeft = CooldownManager.COOLDOWN_TIME - (System.currentTimeMillis() - CooldownManager.lastUseMap.get(uuid));
                 long seconds = timeLeft / 1000;
-                source.sendError(Text.literal("Veuillez patienter " + seconds + " secondes avant de réutiliser la commande."));
+                source.sendError(Text.literal("Tp Spawn disponible dans " + seconds + " secondes !"));
                 return 0;
             }
 
@@ -39,6 +39,10 @@ public class TpSpawn {
             if (server != null) {
                 server.getCommandManager().executeWithPrefix(player.getCommandSource().withLevel(4), commande);
             }
+
+            CooldownManager.recordUse(uuid);
+
+            return 1;
 
         }
 

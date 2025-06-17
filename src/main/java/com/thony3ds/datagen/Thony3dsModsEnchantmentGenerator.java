@@ -54,7 +54,7 @@ public class Thony3dsModsEnchantmentGenerator extends FabricDynamicRegistryProvi
 
         register(entries, Thony3dsModsEffects.PAIN_ECHO, Enchantment.builder(
                                 Enchantment.definition(
-                                        registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                                        registries.getOrThrow(RegistryKeys.ITEM).getOrThrow(ItemTags.FIRE_ASPECT_ENCHANTABLE),
                                         // this is the "weight" or probability of our enchantment showing up in the table
                                         1,
                                         // the maximum level of the enchantment

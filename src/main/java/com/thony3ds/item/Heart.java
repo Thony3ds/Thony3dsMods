@@ -2,6 +2,8 @@ package com.thony3ds.item;
 
 import com.thony3ds.util.LootboxLogic;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.text.Text;
@@ -21,9 +23,13 @@ public class Heart extends Item {
             return ActionResult.PASS;
         }
 
-        if (!(player.getMaxHealth() >= 39)) {
+        if (player.getMaxHealth() <= 38) {
             player.getInventory().getMainHandStack().decrement(1);
             player.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() + 2);
+        }else if(player.getMaxHealth() == 39){
+            player.getInventory().getMainHandStack().decrement(1);
+            player.getAttributeInstance(EntityAttributes.MAX_HEALTH).setBaseValue(player.getMaxHealth() + 1);
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 72000, 3, false, false));
         }else{
             player.sendMessage(Text.of("You can't have more HP !"), false);
         }

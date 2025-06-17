@@ -60,7 +60,7 @@ public class Thony3dsModsCustomTrades {
                     factories.add((entity, random) -> new TradeOffer(
                             new TradedItem(Items.OBSIDIAN, 10),
                             Optional.of(new TradedItem(Thony3dsModsItems.CHOCOBAR, 1)),
-                            new ItemStack(Thony3dsModsItems.COIN, 5),
+                            new ItemStack(Thony3dsModsItems.COIN, 16),
                             9999, 2, 0.0f));
                 });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.FRANK_MASTER, 4,
@@ -74,7 +74,7 @@ public class Thony3dsModsCustomTrades {
                 factories -> {
                     factories.add((entity, random) -> new TradeOffer(
                             new TradedItem(Thony3dsModsItems.VOITURE, 1),
-                            new ItemStack(Thony3dsModsItems.COIN, 16),
+                            new ItemStack(Thony3dsModsItems.COIN, 25),
                             9999, 5, 0.0f));
                 });
         TradeOfferHelper.registerVillagerOffers(Thony3dsModsVillagers.XUR_MASTER, 1,
