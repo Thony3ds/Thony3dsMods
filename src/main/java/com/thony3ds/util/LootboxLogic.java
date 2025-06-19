@@ -56,7 +56,7 @@ public class LootboxLogic {
             new ItemStack(Items.SHEEP_SPAWN_EGG, 1),
             new ItemStack(Items.PIG_SPAWN_EGG, 1),
             new ItemStack(Items.COW_SPAWN_EGG, 1),
-            new ItemStack(Items.EGG),
+            new ItemStack(Items.YELLOW_CARPET),
             new ItemStack(Items.WOLF_ARMOR, 1),
             new ItemStack(Items.DIAMOND_BLOCK, 2)
     ));
@@ -75,7 +75,7 @@ public class LootboxLogic {
             new ItemStack(Items.DIAMOND_BLOCK, 2),
             new ItemStack(Items.ENDER_PEARL, 4),
             new ItemStack(Items.EVOKER_SPAWN_EGG, 1),
-            new ItemStack(Items.EGG, 2),
+            new ItemStack(Items.YELLOW_CARPET, 2),
             new ItemStack(Thony3dsModsItems.POLISH_COW_MUSIC_DISK, 1)
     ));
 
@@ -90,7 +90,7 @@ public class LootboxLogic {
             new ItemStack(Items.GOLDEN_APPLE, 16),
             new ItemStack(Items.SHULKER_BOX, 1),
             new ItemStack(Items.EXPERIENCE_BOTTLE, 32),
-            new ItemStack(Items.EGG, 3),
+            new ItemStack(Items.YELLOW_CARPET, 3),
             new ItemStack(Items.NETHERITE_SCRAP, 3),
             new ItemStack(Items.SNIFFER_EGG),
             new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1),
