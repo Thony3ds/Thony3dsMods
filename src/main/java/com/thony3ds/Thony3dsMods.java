@@ -84,6 +84,19 @@ public final class Thony3dsMods implements ModInitializer {
 					.requires(ServerCommandSource::isExecutedByPlayer)
 							.executes(TpSpawn::executeCommand));
 		});
+		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+			SuggestionProvider<ServerCommandSource> EasyPlayerSuggestionProvider= new EasyPlayerSuggestionProvider();
+			dispatcher.register(CommandManager.literal("add_easy_player")
+					.requires(source -> source.hasPermissionLevel(4))
+					.then(CommandManager.argument("action", StringArgumentType.string()).suggests(EasyPlayerSuggestionProvider)
+							.then(CommandManager.argument("player", EntityArgumentType.player())
+									.executes(ModFacile::executeCommand))));
+		});
+		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+			dispatcher.register(CommandManager.literal("disable_easy_mod")
+					.requires(ServerCommandSource::isExecutedByPlayer)
+					.executes(ModFacile::executeRemoveCommand));
+		});
 		LOGGER.info("Thony3dsMods Loaded !");
 	}
 }

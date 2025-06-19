@@ -1,6 +1,5 @@
 package com.thony3ds.util;
 
-import com.thony3ds.Thony3dsMods;
 import com.thony3ds.item.Thony3dsModsItems;
 import com.thony3ds.item.Thony3dsModsPotions;
 import net.minecraft.item.Item;
@@ -22,7 +21,7 @@ public class LootboxLogic {
             new BigDecimal("10"), new BigDecimal("10"), new BigDecimal("10"), new BigDecimal("10"),
             new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"), new BigDecimal("5"),
             new BigDecimal("2.5"), new BigDecimal("2.5"),
-            new BigDecimal("1"), new BigDecimal("1")
+            new BigDecimal("1.5"), new BigDecimal("0.5")
     );
 
     private static final List<ItemStack> fallbackLoot = Collections.unmodifiableList(Arrays.asList(
@@ -57,7 +56,7 @@ public class LootboxLogic {
             new ItemStack(Items.SHEEP_SPAWN_EGG, 1),
             new ItemStack(Items.PIG_SPAWN_EGG, 1),
             new ItemStack(Items.COW_SPAWN_EGG, 1),
-            Thony3dsModsPotions.getXpPotionItemStack(0),
+            new ItemStack(Items.EGG),
             new ItemStack(Items.WOLF_ARMOR, 1),
             new ItemStack(Items.DIAMOND_BLOCK, 2)
     ));
@@ -76,7 +75,7 @@ public class LootboxLogic {
             new ItemStack(Items.DIAMOND_BLOCK, 2),
             new ItemStack(Items.ENDER_PEARL, 4),
             new ItemStack(Items.EVOKER_SPAWN_EGG, 1),
-            Thony3dsModsPotions.getXpPotionItemStack(1),
+            new ItemStack(Items.EGG, 2),
             new ItemStack(Thony3dsModsItems.POLISH_COW_MUSIC_DISK, 1)
     ));
 
@@ -91,22 +90,22 @@ public class LootboxLogic {
             new ItemStack(Items.GOLDEN_APPLE, 16),
             new ItemStack(Items.SHULKER_BOX, 1),
             new ItemStack(Items.EXPERIENCE_BOTTLE, 32),
-            Thony3dsModsPotions.getXpPotionItemStack(2),
+            new ItemStack(Items.EGG, 3),
             new ItemStack(Items.NETHERITE_SCRAP, 3),
-            new ItemStack(Thony3dsModsItems.LOOTBOX2, 2),
+            new ItemStack(Items.SNIFFER_EGG),
             new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1),
             new ItemStack(Thony3dsModsItems.DONT_STOP_THE_FASCISM_MUSIC_DISK, 1)
     ));
 
     private static final List<ItemStack> lootLegendaire = Collections.unmodifiableList(Arrays.asList(
             new ItemStack(Items.SHULKER_BOX, 3),
-            new ItemStack(Items.WITHER_ROSE, 5),
+            new ItemStack(Items.WITHER_SKELETON_SPAWN_EGG, 10),
             new ItemStack(Items.WIND_CHARGE, 48),
             new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1),
             new ItemStack(Items.DIAMOND_HORSE_ARMOR),
-            new ItemStack(Items.OMINOUS_BOTTLE),
+            new ItemStack(Items.WITHER_SKELETON_SKULL),
             new ItemStack(Items.ELYTRA, 1),
-            new ItemStack(Items.END_CRYSTAL, 1),
+            new ItemStack(Items.END_CRYSTAL, 2),
             new ItemStack(Items.DRAGON_HEAD, 1),
             new ItemStack(Items.GHAST_TEAR, 3),
             new ItemStack(Items.NETHERITE_INGOT),
